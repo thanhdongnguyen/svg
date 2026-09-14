@@ -1,0 +1,69 @@
+Server 127.0.0.1:4173 stopped with SIGINT after a completed conversion. Uploaded a new local logo-alpha.png, then converted:
+- link "Đến công cụ chuyển đổi":
+  - /url: "#converter"
+- banner:
+  - link "SVG — Trang chủ":
+    - /url: /
+    - text: SVG.
+  - navigation "Điều hướng chính":
+    - button "Hướng dẫn"
+    - button "Chuyển sang giao diện tối":
+- main:
+  - region "Ảnh của bạn. Dưới dạng vector.":
+    - heading "Ảnh của bạn. Dưới dạng vector." [level=1]:
+      - text: Ảnh của bạn.
+      - text: Dưới dạng vector.
+    - paragraph:
+      - text: Chuyển PNG, JPG thành SVG ngay trên thiết bị.
+      - text: Không cần tài khoản.
+    - button "Chọn ảnh khác":
+      - text: Chọn ảnh khác
+    - paragraph: hoặc kéo ảnh vào trang
+    - paragraph:
+      - text: PNG, JPG, JPEG · Tối đa 10 MiB
+      - text: 4 triệu pixel · 4.096 px mỗi chiều
+  - region "Công cụ chuyển ảnh sang SVG":
+    - paragraph: logo-alpha.png0.3 KB
+    - button "Xóa ảnh và bắt đầu lại":
+    - generic: So sánh ảnh128 × 128 px
+    - group "Nền xem trước":
+      - button "Nền trong suốt" [pressed]: Ô lưới
+      - button "Nền trắng": Trắng
+      - button "Nền đen": Đen
+    - group "Zoom đồng bộ":
+      - button "Thu nhỏ" [disabled]:
+      - status "Mức zoom": 100%
+      - button "Phóng to":
+      - button "Vừa khung" [disabled]:
+    - region "Ảnh gốc":
+      - paragraph: Ảnh gốc
+      - generic "Vùng xem Ảnh gốc":
+        - img "Ảnh raster gốc"
+    - region "SVG":
+      - paragraph: SVG
+      - generic "Vùng xem SVG":
+        - img "Kết quả SVG vector"
+    - generic: Chất lượng
+    - combobox "Chất lượng":
+      - generic: Cân bằng
+      - img: ▼
+    - textbox: balanced
+    - generic: Màu sắc
+    - combobox "Màu sắc":
+      - generic: Giữ màu
+      - img: ▼
+    - textbox: color
+    - button "Tinh chỉnh":
+      - text: Tinh chỉnh
+    - paragraph: Cân bằng chi tiết và kích thước SVG.
+    - status:
+      - paragraph:
+        - text: SVG đã sẵn sàng
+      - paragraph: 0.3 KB · 1 đường · 1 màu · 0.1 giây
+    - button "Chuyển lại" [active]
+    - link "Tải SVG":
+      - /url: blob:http://127.0.0.1:4173/57ec7b54-d601-4616-b259-d3315863b228
+      - text: Tải SVG
+  - paragraph: Zoom và nền chỉ thay đổi cách xem, không thay đổi SVG tải về.
+  - generic: Gradient, bóng và ảnh chụp có thể khác bản gốc. Hãy kiểm tra trước khi tải.
+- alert

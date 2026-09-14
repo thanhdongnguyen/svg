@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src blob: data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<link rel="icon" href="data:,">
+<title>Hai SVG khác nhau tạo cùng raster</title>
+<style>
+body { font: 16px/1.6 system-ui, sans-serif; max-width: 1000px; margin: 32px auto; padding: 0 20px; color: #171717; background: #fff; }
+h1 { font-size: 28px; line-height: 1.3; } h2 { font-size: 20px; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f4f4f4; padding: 16px; font-size: 13px; }
+canvas { border: 1px solid #999; width: 128px; height: 128px; }
+</style>
+<h1>Hai SVG khác nhau tạo cùng raster</h1>
+<p>SVG A chỉ có hình chữ nhật đỏ. SVG B thêm hình tròn xanh bên dưới cùng hình chữ nhật đục.
+Hình tròn bị che hoàn toàn. Trang tự render cả hai bằng browser và so từng byte RGBA, PNG và JPEG ở 1×, 2×, 4×.
+Không tải thư viện, không gửi dữ liệu, không dùng engine chuyển đổi. Đây là phản ví dụ cho việc phục hồi duy nhất SVG gốc từ raster.</p>
+<div class="pair">
+<section><h2>SVG A</h2><pre id="source-a"></pre><canvas id="preview-a" width="64" height="64"></canvas></section>
+<section><h2>SVG B</h2><pre id="source-b"></pre><canvas id="preview-b" width="64" height="64"></canvas></section>
+</div>
+<h2>Kết quả lần chạy này</h2>
+<pre id="result">Đang chạy…</pre>
+<script>
+"use strict";
+const sourceA = '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" fill="#ff0000"/></svg>';
+const sourceB = '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><circle cx="32" cy="32" r="12" fill="#0000ff"/><rect width="64" height="64" fill="#ff0000"/></svg>';
+document.getElementById("source-a").textContent = sourceA;
+document.getElementById("source-b").textContent = sourceB;
+
+async function render(source, size) {
+  const url = URL.createObjectURL(new Blob([source], {type: "image/svg+xml"}));
+  const picture = new Image();
+  try {
+    await new Promise((resolve, reject) => {
+      picture.onload = resolve;
+      picture.onerror = () => reject(new Error("Cannot decode controlled SVG fixture"));
+      picture.src = url;
+    });
+    const canvas = document.createElement("canvas");
+    canvas.width = canvas.height = size;
+    const context = canvas.getContext("2d", {willReadFrequently: true});
+    if (!context) throw new Error("Canvas2D is unavailable");
+    context.drawImage(picture, 0, 0, size, size);
+    return canvas;
+  } finally { URL.revokeObjectURL(url); picture.src = ""; }
+}
+async function digest(bytes) {
+  const buffer = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(buffer), value => value.toString(16).padStart(2, "0")).join("");
+}
+async function encode(canvas, type) {
+  const blob = await new Promise((resolve, reject) => canvas.toBlob(value => value ? resolve(value) : reject(new Error("Cannot encode fixture")), type, 0.9));
+  return {type: blob.type, bytes: new Uint8Array(await blob.arrayBuffer())};
+}
+function differences(a, b) {
+  if (a.length !== b.length) return null;
+  let count = 0;
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) count++;
+  return count;
+}
+async function run() {
+  const report = {
+    purpose: "Counterexample to unique original-SVG recovery; not vectorizer benchmark",
+    generatedAt: new Date().toISOString(), userAgent: navigator.userAgent,
+    sourceStringsDiffer: sourceA !== sourceB,
+    sourceA, sourceB,
+    sourceASha256: await digest(new TextEncoder().encode(sourceA)),
+    sourceBSha256: await digest(new TextEncoder().encode(sourceB)),
+    samples: []
+  };
+  for (const scale of [1, 2, 4]) {
+    const size = 64 * scale;
+    const [a, b] = await Promise.all([render(sourceA, size), render(sourceB, size)]);
+    const rgbaA = a.getContext("2d").getImageData(0, 0, size, size).data;
+    const rgbaB = b.getContext("2d").getImageData(0, 0, size, size).data;
+    const row = {scale, width: size, height: size, rgbaBytesPerImage: rgbaA.length,
+      differingRgbaComponents: differences(rgbaA, rgbaB), rgbaASha256: await digest(rgbaA), rgbaBSha256: await digest(rgbaB), encoded: []};
+    for (const type of ["image/png", "image/jpeg"]) {
+      const [encodedA, encodedB] = await Promise.all([encode(a, type), encode(b, type)]);
+      row.encoded.push({requestedType: type, actualTypeA: encodedA.type, actualTypeB: encodedB.type,
+        bytesA: encodedA.bytes.length, bytesB: encodedB.bytes.length,
+        differingBytes: differences(encodedA.bytes, encodedB.bytes), sha256A: await digest(encodedA.bytes), sha256B: await digest(encodedB.bytes)});
+    }
+    report.samples.push(row);
+    if (scale === 1) {
+      document.getElementById("preview-a").getContext("2d").drawImage(a, 0, 0);
+      document.getElementById("preview-b").getContext("2d").drawImage(b, 0, 0);
+    }
+    a.width = a.height = b.width = b.height = 0;
+  }
+  report.passed = report.sourceStringsDiffer && report.samples.every(sample => sample.differingRgbaComponents === 0 && sample.encoded.every(value => value.differingBytes === 0 && value.actualTypeA === value.requestedType && value.actualTypeB === value.requestedType));
+  window.collisionReport = report;
+  document.getElementById("result").textContent = JSON.stringify(report, null, 2);
+  document.documentElement.dataset.complete = "true";
+}
+run().catch(error => { document.getElementById("result").textContent = String(error); document.documentElement.dataset.complete = "error"; });
+</script>
+</html>

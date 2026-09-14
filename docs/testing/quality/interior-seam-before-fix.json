@@ -1,0 +1,85 @@
+{
+  "name": "interior-seam",
+  "quality": "maximum",
+  "width": 128,
+  "height": 128,
+  "hueDiagnostic": {
+    "color": [
+      72,
+      95,
+      151
+    ],
+    "max": 148,
+    "rms": 60.10192019907567
+  },
+  "baseline": {
+    "width": 128,
+    "height": 128,
+    "pathCount": 327,
+    "segmentCount": 741,
+    "colorCount": 31,
+    "bytes": 48319,
+    "durationMs": 148.5,
+    "scales": [
+      {
+        "scale": 1,
+        "reference": "decoded raster",
+        "alphaMAE": 0.014213771446078471,
+        "compositeRMSE": 12.320051410646357,
+        "pixelsOver24": 0.03533935546875,
+        "max": 226.54117647058823
+      },
+      {
+        "scale": 2,
+        "reference": "decoded raster",
+        "alphaMAE": 0.014489506740196098,
+        "compositeRMSE": 12.17768627470947,
+        "pixelsOver24": 0.03448486328125,
+        "max": 231.17254901960786
+      },
+      {
+        "scale": 4,
+        "reference": "decoded raster",
+        "alphaMAE": 0.01456998937270151,
+        "compositeRMSE": 13.156367702384902,
+        "pixelsOver24": 0.03533172607421875,
+        "max": 231.17254901960786
+      }
+    ]
+  },
+  "candidate": {
+    "width": 128,
+    "height": 128,
+    "pathCount": 2,
+    "segmentCount": 100,
+    "colorCount": 2,
+    "bytes": 4044,
+    "durationMs": 316.30000000074506,
+    "scales": [
+      {
+        "scale": 1,
+        "reference": "decoded raster",
+        "alphaMAE": 0.002765730315563733,
+        "compositeRMSE": 3.7579785749762107,
+        "pixelsOver24": 0.01007080078125,
+        "max": 79.34117647058825
+      },
+      {
+        "scale": 2,
+        "reference": "decoded raster",
+        "alphaMAE": 0.006683768478094398,
+        "compositeRMSE": 6.737859987511482,
+        "pixelsOver24": 0.0349578857421875,
+        "max": 106.95686274509805
+      },
+      {
+        "scale": 4,
+        "reference": "decoded raster",
+        "alphaMAE": 0.00710712507659281,
+        "compositeRMSE": 7.640176246517832,
+        "pixelsOver24": 0.036590576171875,
+        "max": 126.00784313725492
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Browser vectorization research probe</title>
+<style>body{font:15px system-ui;margin:24px}button{padding:10px}table{border-collapse:collapse}td,th{padding:12px;border:1px solid #aaa}img,canvas{width:160px;height:160px;background:repeating-conic-gradient(#ddd 0% 25%,white 0% 50%) 0/16px 16px}pre{white-space:pre-wrap}</style>
+<h1>Browser vectorization research probe</h1>
+<p>Diagnostic synthetic fixtures only. Not a representative quality or performance benchmark.</p>
+<button id="init">Load local engines</button> <button id="run" disabled>Run fixtures</button>
+<p id="status">Load the three pinned vendor files beside this HTML first.</p>
+<table><thead><tr><th>Fixture</th><th>Decoded source</th><th>VTracer adapter</th><th>ImageTracerJS</th></tr></thead><tbody id="gallery"></tbody></table>
+<pre id="result"></pre>
+<script type="module">
+const W=256,H=256, workers={}, urls=[];
+const hierarchy=new URL(location.href).searchParams.get('hierarchy')||'cutout';
+let nextId=0;
+const pending=new Map();
+function urlFor(blob){const u=URL.createObjectURL(blob);urls.push(u);return u;}
+const workerSource = (engine) => `
+${engine==='vtracer' ? `import init,{trace} from '${new URL('rastertrace_wasm.js',location.href)}';
+await init({module_or_path:new URL('${new URL('rastertrace_wasm_bg.wasm',location.href)}')});` : `import '${new URL('imagetracer.js',location.href)}';`}
+self.postMessage({ready:true});
+self.onmessage=async({data:{id,blob}})=>{try{
+const bitmap=await createImageBitmap(blob);
+const c=new OffscreenCanvas(bitmap.width,bitmap.height),ctx=c.getContext('2d',{willReadFrequently:true});
+ctx.drawImage(bitmap,0,0);bitmap.close();const im=ctx.getImageData(0,0,c.width,c.height);
+const start=performance.now();
+const svg=${engine==='vtracer' ? `trace(new Uint8Array(im.data.buffer),im.width,im.height,'spline','${hierarchy}','color',0,8,0,60,4,10,45,3)` : `self.ImageTracer.imagedataToSVG(im,{ltres:1,qtres:1,pathomit:0,colorsampling:2,numberofcolors:64,colorquantcycles:3,strokewidth:0,viewbox:true,roundcoords:3})`};
+self.postMessage({id,svg,traceMs:performance.now()-start});
+}catch(e){self.postMessage({id,error:String(e)});}};`;
+async function initWorkers(){
+await Promise.all(['vtracer','imagetracer'].map(engine=>new Promise((resolve,reject)=>{
+const worker=new Worker(urlFor(new Blob([workerSource(engine)],{type:'text/javascript'})),{type:'module'});
+workers[engine]=worker;
+worker.onerror=e=>reject(new Error(e.message));
+worker.onmessage=({data})=>{if(data.ready)return resolve();const p=pending.get(data.id);if(p){pending.delete(data.id);data.error?p.reject(new Error(data.error)):p.resolve(data);}};
+})));
+document.querySelector('#run').disabled=false;
+document.querySelector('#status').textContent='Both workers loaded. Network can now be disabled before running.';
+}
+function trace(engine,blob){return new Promise((resolve,reject)=>{const id=++nextId;pending.set(id,{resolve,reject});workers[engine].postMessage({id,blob});});}
+function fixture(name){const c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+if(name==='flat_blocks'||name==='flat_blocks_jpeg'){g.fillStyle='#fff';g.fillRect(0,0,W,H);g.fillStyle='#e63946';g.fillRect(32,32,96,192);g.fillStyle='#2463eb';g.fillRect(128,32,96,192);}
+if(name==='thin_lines_and_hole'){g.fillStyle='#fff';g.fillRect(0,0,W,H);g.fillStyle='#111';g.beginPath();g.arc(100,100,64,0,2*Math.PI);g.arc(100,100,32,0,2*Math.PI,true);g.fill();g.fillRect(24,200,208,1);g.fillRect(200,24,2,144);g.fillRect(222,22,3,3);}
+if(name==='linear_gradient'){let p=g.createLinearGradient(0,0,W,0);p.addColorStop(0,'#000');p.addColorStop(1,'#fff');g.fillStyle=p;g.fillRect(0,0,W,H);}
+if(name==='constant_half_alpha'){g.fillStyle='rgba(255,0,0,0.5)';g.fillRect(32,32,192,192);}
+if(name==='radial_soft_alpha'){let p=g.createRadialGradient(128,128,0,128,128,112);p.addColorStop(0,'rgba(255,0,0,1)');p.addColorStop(1,'rgba(255,0,0,0)');g.fillStyle=p;g.fillRect(0,0,W,H);}
+return new Promise(resolve=>c.toBlob(resolve,name.endsWith('_jpeg')?'image/jpeg':'image/png',0.8));}
+async function decode(blob){const img=new Image();img.src=urlFor(blob);await img.decode();const c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d',{willReadFrequently:true});g.drawImage(img,0,0,W,H);return {img,data:g.getImageData(0,0,W,H).data};}
+function metrics(a,b){let alpha=0,white=0,black=0,changed=0;for(let i=0;i<a.length;i+=4){const aa=a[i+3]/255,ba=b[i+3]/255;alpha+=Math.abs(aa-ba);let diff=false;for(let k=0;k<4;k++)if(a[i+k]!==b[i+k])diff=true;changed+=diff?1:0;for(let k=0;k<3;k++){let d=a[i+k]*aa-b[i+k]*ba;black+=d*d;d=(a[i+k]*aa+255*(1-aa))-(b[i+k]*ba+255*(1-ba));white+=d*d;}}
+const n=a.length/4;return {alphaMAE:alpha/n,whiteCompositeRMSE:Math.sqrt(white/(3*n)),blackCompositeRMSE:Math.sqrt(black/(3*n)),changedRgbaPixels:changed,totalPixels:n,sourceCenter:Array.from(a.slice((128*W+128)*4,(128*W+128)*4+4)),outputCenter:Array.from(b.slice((128*W+128)*4,(128*W+128)*4+4))};}
+async function run(){const records=[];document.querySelector('#run').disabled=true;
+for(const name of ['flat_blocks','flat_blocks_jpeg','thin_lines_and_hole','linear_gradient','constant_half_alpha','radial_soft_alpha']){
+const blob=await fixture(name),source=await decode(blob),row=document.createElement('tr');const label=document.createElement('td');label.textContent=name;row.append(label);const original=document.createElement('td');original.append(source.img);row.append(original);
+for(const engine of ['vtracer','imagetracer']){const r=await trace(engine,blob);const doc=new DOMParser().parseFromString(r.svg,'image/svg+xml'),rendered=await decode(new Blob([r.svg],{type:'image/svg+xml'}));const cell=document.createElement('td');cell.append(rendered.img);row.append(cell);records.push({fixture:name,engine,mime:blob.type,width:W,height:H,svgBytes:new TextEncoder().encode(r.svg).length,pathCount:doc.querySelectorAll('path').length,gradientCount:doc.querySelectorAll('linearGradient,radialGradient').length,hasRaster:!!doc.querySelector('image,feImage'),viewBox:doc.documentElement.getAttribute('viewBox'),...metrics(source.data,rendered.data),traceMsSingleObservation:r.traceMs});}
+document.querySelector('#gallery').append(row);}
+const corrupt=[];for(const engine of ['vtracer','imagetracer']){try{await trace(engine,new Blob(['not a PNG'],{type:'image/png'}));corrupt.push({engine,rejected:false});}catch(e){corrupt.push({engine,rejected:true,error:String(e)});}}
+window.probeResults={date:new Date().toISOString(),userAgent:navigator.userAgent,hardwareConcurrency:navigator.hardwareConcurrency,devicePixelRatio,networkOnlineAtRun:navigator.onLine,width:W,height:H,settings:{vtracer:{mode:'spline',hierarchical:hierarchy,colorMode:'color',filterSpeckle:0,colorPrecision:8,layerDifference:0,cornerThreshold:60,lengthThreshold:4,maxIterations:10,spliceThreshold:45,pathPrecision:3},imagetracer:{ltres:1,qtres:1,pathomit:0,colorsampling:2,numberofcolors:64,colorquantcycles:3,strokewidth:0,viewbox:true,roundcoords:3}},limitations:['Six synthetic 256x256 fixtures; not a product benchmark or quality ranking.','Preset budgets differ; cannot compare speed or general engine quality from this probe.','No preprocessing or optimization from RasterTrace app used; calls its WASM adapter directly.','RGB composite metrics use decoded canvas values without linear-light color conversion; numeric diagnostic only.','Single timings include engine call only, not loading, decoding or rendering.'],records,corrupt};
+document.querySelector('#result').textContent=JSON.stringify(window.probeResults,null,2);document.querySelector('#status').textContent='Complete';}
+window.initProbe=initWorkers;window.runProbe=run;
+document.querySelector('#init').onclick=()=>initWorkers().catch(e=>document.querySelector('#status').textContent=String(e));
+document.querySelector('#run').onclick=()=>run().catch(e=>document.querySelector('#status').textContent=String(e));
+window.addEventListener('beforeunload',()=>{Object.values(workers).forEach(w=>w.terminate());urls.forEach(u=>URL.revokeObjectURL(u));});
+</script>

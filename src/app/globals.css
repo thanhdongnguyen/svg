@@ -128,3 +128,24 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .page-width { width: min(100% - 3rem, 1312px); margin-inline: auto; }
+  .demo-comparison > section { height: 550px; }
+  .active-comparison > section { height: 460px; }
+  .preview-white { background: white; }
+  .preview-black { background: black; }
+  .preview-checker {
+    background-color: var(--card);
+    background-image: conic-gradient(var(--muted) 25%, transparent 0 50%, var(--muted) 0 75%, transparent 0);
+    background-size: 20px 20px;
+  }
+  @media (max-width: 767px) {
+    .page-width { width: calc(100% - 2rem); }
+    .demo-comparison > section { height: min(100vw, 430px); }
+    .active-comparison > section { height: 360px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}

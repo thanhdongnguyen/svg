@@ -1,0 +1,23 @@
+{
+  "engine": "VTracer 1.0.0-alpha.4, fixed palette, stacked underpaint + cutout",
+  "settings": {
+    "quality": "balanced",
+    "mode": "color",
+    "colors": 32,
+    "threshold": 128
+  },
+  "sourceSHA256": "ce439dd5ea1308a88418a07abca7563cccf75f68633e38fd66105aefa78777f5",
+  "svgSHA256": "900f739d7ccf1a1062f9b4edab3ededcfc1fc943dddeee751697be0c3071e68f",
+  "metrics": {
+    "width": 1254,
+    "height": 1254,
+    "pathCount": 3548,
+    "segmentCount": 41523,
+    "colorCount": 32,
+    "bytes": 1340131,
+    "durationMs": 2638.601292
+  },
+  "warnings": [
+    "Màu và chi tiết được xấp xỉ bằng đường vector. Hãy kiểm tra gradient, texture và chi tiết nhỏ trước khi tải."
+  ]
+}

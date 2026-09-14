@@ -1,0 +1,76 @@
+QA static server 127.0.0.1:4176, PID 82816.
+WASM loaded from same-origin /engines/vtracer-1.0.0-alpha.4.wasm.
+Converted interior-seam PNG while server alive. Stopped own server (kill PID 82816 succeeded; lsof 4176 empty).
+Then selected a different local gradient.png and converted successfully with the same living worker.
+- link "Đến công cụ chuyển đổi":
+  - /url: "#converter"
+- banner:
+  - link "SVG — Trang chủ":
+    - /url: /
+    - text: SVG.
+  - navigation "Điều hướng chính":
+    - button "Hướng dẫn"
+    - button "Chuyển sang giao diện tối":
+- main:
+  - region "Ảnh của bạn. Dưới dạng vector.":
+    - heading "Ảnh của bạn. Dưới dạng vector." [level=1]:
+      - text: Ảnh của bạn.
+      - text: Dưới dạng vector.
+    - paragraph:
+      - text: Chuyển PNG, JPG thành SVG ngay trên thiết bị.
+      - text: Không cần tài khoản.
+    - button "Chọn ảnh khác":
+      - text: Chọn ảnh khác
+    - paragraph: hoặc kéo ảnh vào trang
+    - paragraph:
+      - text: PNG, JPG, JPEG · Tối đa 10 MiB
+      - text: 4 triệu pixel · 4.096 px mỗi chiều
+  - region "Công cụ chuyển ảnh sang SVG":
+    - paragraph: gradient.png0.5 KB
+    - button "Xóa ảnh và bắt đầu lại":
+    - generic: So sánh ảnh160 × 100 px
+    - group "Nền xem trước":
+      - button "Nền trong suốt" [pressed]: Ô lưới
+      - button "Nền trắng": Trắng
+      - button "Nền đen": Đen
+    - group "Zoom đồng bộ":
+      - button "Thu nhỏ" [disabled]:
+      - status "Mức zoom": 100%
+      - button "Phóng to":
+      - button "Vừa khung" [disabled]:
+    - region "Ảnh gốc":
+      - paragraph: Ảnh gốc
+      - generic "Vùng xem Ảnh gốc":
+        - img "Ảnh raster gốc"
+    - region "SVG":
+      - paragraph: SVG
+      - generic "Vùng xem SVG":
+        - img "Kết quả SVG vector"
+    - generic: Chất lượng
+    - combobox "Chất lượng":
+      - generic: Cân bằng
+      - img: ▼
+    - textbox: balanced
+    - generic: Màu sắc
+    - combobox "Màu sắc":
+      - generic: Giữ màu
+      - img: ▼
+    - textbox: color
+    - button "Tinh chỉnh":
+      - text: Tinh chỉnh
+    - paragraph: Cân bằng chi tiết và kích thước SVG.
+    - status:
+      - paragraph:
+        - text: SVG đã sẵn sàng
+      - paragraph: 26.2 KB · 64 đường · 32 màu · 0.4 giây
+    - button "Chuyển lại" [active]
+    - link "Tải SVG":
+      - /url: blob:http://127.0.0.1:4176/24b7087d-4aa9-4cfb-91b0-dda8b28b8db4
+      - text: Tải SVG
+    - alert:
+      - generic: Lưu ý về ảnh này
+      - list:
+        - listitem: Màu và chi tiết được xấp xỉ bằng đường vector. Hãy kiểm tra gradient, texture và chi tiết nhỏ trước khi tải.
+  - paragraph: Zoom và nền chỉ thay đổi cách xem, không thay đổi SVG tải về.
+  - generic: Gradient, bóng và ảnh chụp có thể khác bản gốc. Hãy kiểm tra trước khi tải.
+- alert

@@ -1,0 +1,121 @@
+[
+  {
+    "name": "logo-alpha",
+    "paths": 1,
+    "bytes": 310,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0.007158586090686294,
+        "compositeRMSE": 6.28475629384552
+      }
+    ]
+  },
+  {
+    "name": "soft-alpha",
+    "paths": 31,
+    "bytes": 13514,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0.01750272863051425,
+        "compositeRMSE": 6.107478240134905
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0.016822545668654865,
+        "compositeRMSE": 6.8998949257189075
+      }
+    ]
+  },
+  {
+    "name": "transparent",
+    "paths": 0,
+    "bytes": 89,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      }
+    ]
+  },
+  {
+    "name": "tiny",
+    "paths": 1,
+    "bytes": 121,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      }
+    ]
+  },
+  {
+    "name": "portrait",
+    "paths": 2,
+    "bytes": 384,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0,
+        "compositeRMSE": 2.3219962675824153
+      }
+    ]
+  },
+  {
+    "name": "landscape",
+    "paths": 2,
+    "bytes": 384,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 0
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0,
+        "compositeRMSE": 2.3219962675824153
+      }
+    ]
+  },
+  {
+    "name": "gradient",
+    "paths": 33,
+    "bytes": 7802,
+    "scales": [
+      {
+        "scale": 1,
+        "alphaMAE": 0,
+        "compositeRMSE": 12.719102267848939
+      },
+      {
+        "scale": 2,
+        "alphaMAE": 0,
+        "compositeRMSE": 13.412828902460012
+      }
+    ]
+  }
+]

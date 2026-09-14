@@ -1,0 +1,4233 @@
+[
+  {
+    "name": "interior-seam",
+    "quality": "fast",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        95,
+        151
+      ],
+      "max": 148,
+      "rms": 60.10192019907567
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 3,
+      "segmentCount": 52,
+      "colorCount": 3,
+      "bytes": 1151,
+      "durationMs": 64.10000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.013847560508576991,
+          "compositeRMSE": 11.778790010555621,
+          "pixelsOver24": 0.03643798828125,
+          "max": 226.54117647058823
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014429488836548637,
+          "compositeRMSE": 11.880048665951032,
+          "pixelsOver24": 0.0423583984375,
+          "max": 229.34509803921569
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014756819781132814,
+          "compositeRMSE": 12.870577366490897,
+          "pixelsOver24": 0.040676116943359375,
+          "max": 232
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 3,
+      "segmentCount": 264,
+      "colorCount": 2,
+      "bytes": 7176,
+      "durationMs": 184.89999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.002315027573529409,
+          "compositeRMSE": 8.382494583982021,
+          "pixelsOver24": 0.0228271484375,
+          "max": 150
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006092924230238973,
+          "compositeRMSE": 9.987275671949307,
+          "pixelsOver24": 0.0378875732421875,
+          "max": 158
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006953190822227068,
+          "compositeRMSE": 10.773442055614618,
+          "pixelsOver24": 0.037075042724609375,
+          "max": 185
+        }
+      ]
+    }
+  },
+  {
+    "name": "interior-seam",
+    "quality": "balanced",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        95,
+        151
+      ],
+      "max": 148,
+      "rms": 60.10192019907567
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 327,
+      "segmentCount": 681,
+      "colorCount": 31,
+      "bytes": 47735,
+      "durationMs": 109.40000000223517,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.011103850719975506,
+          "compositeRMSE": 10.753685049168913,
+          "pixelsOver24": 0.03497314453125,
+          "max": 226.54117647058823
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.011582019282322263,
+          "compositeRMSE": 10.827751119114044,
+          "pixelsOver24": 0.0384368896484375,
+          "max": 231.17254901960786
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.011823422301048613,
+          "compositeRMSE": 11.736256610804361,
+          "pixelsOver24": 0.037921905517578125,
+          "max": 231.17254901960786
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 3,
+      "segmentCount": 174,
+      "colorCount": 2,
+      "bytes": 7022,
+      "durationMs": 159.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0017793543198529364,
+          "compositeRMSE": 4.588602262448673,
+          "pixelsOver24": 0.01605224609375,
+          "max": 108.03529411764706
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006046190448835792,
+          "compositeRMSE": 7.128556932671316,
+          "pixelsOver24": 0.032135009765625,
+          "max": 131.921568627451
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006851674996170088,
+          "compositeRMSE": 8.306629254576338,
+          "pixelsOver24": 0.035404205322265625,
+          "max": 155.05098039215687
+        }
+      ]
+    }
+  },
+  {
+    "name": "interior-seam",
+    "quality": "maximum",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        95,
+        151
+      ],
+      "max": 148,
+      "rms": 60.10192019907567
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 327,
+      "segmentCount": 741,
+      "colorCount": 31,
+      "bytes": 48319,
+      "durationMs": 67.80000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014213771446078471,
+          "compositeRMSE": 12.320051410646357,
+          "pixelsOver24": 0.03533935546875,
+          "max": 226.54117647058823
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014489506740196098,
+          "compositeRMSE": 12.17768627470947,
+          "pixelsOver24": 0.03448486328125,
+          "max": 231.17254901960786
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.01456998937270151,
+          "compositeRMSE": 13.156367702384902,
+          "pixelsOver24": 0.03533172607421875,
+          "max": 231.17254901960786
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 3,
+      "segmentCount": 246,
+      "colorCount": 2,
+      "bytes": 10247,
+      "durationMs": 427.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0010495653339460758,
+          "compositeRMSE": 1.9272834575625128,
+          "pixelsOver24": 0.00408935546875,
+          "max": 54.88235294117647
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00581934311810664,
+          "compositeRMSE": 6.377231590685655,
+          "pixelsOver24": 0.03460693359375,
+          "max": 106.95686274509805
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006667088527305193,
+          "compositeRMSE": 7.548474606722731,
+          "pixelsOver24": 0.036319732666015625,
+          "max": 126.00784313725492
+        }
+      ]
+    }
+  },
+  {
+    "name": "astronaut",
+    "quality": "fast",
+    "width": 512,
+    "height": 512,
+    "hueDiagnostic": {
+      "color": [
+        142,
+        106,
+        96
+      ],
+      "max": 159,
+      "rms": 78.87109387897661
+    },
+    "baseline": {
+      "width": 512,
+      "height": 512,
+      "pathCount": 1225,
+      "segmentCount": 14815,
+      "colorCount": 12,
+      "bytes": 330778,
+      "durationMs": 594.7999999970198,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 29.990991596221722,
+          "pixelsOver24": 0.23960113525390625,
+          "max": 253
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 30.947472821552502,
+          "pixelsOver24": 0.22008419036865234,
+          "max": 252
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 32.281592947956,
+          "pixelsOver24": 0.21631836891174316,
+          "max": 252
+        }
+      ]
+    },
+    "candidate": {
+      "width": 512,
+      "height": 512,
+      "pathCount": 2790,
+      "segmentCount": 37180,
+      "colorCount": 12,
+      "bytes": 1172740,
+      "durationMs": 1524.199999999255,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 18.386091452977066,
+          "pixelsOver24": 0.2811470031738281,
+          "max": 215
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 18.526779579078415,
+          "pixelsOver24": 0.2844810485839844,
+          "max": 201
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 18.936872809739086,
+          "pixelsOver24": 0.29033875465393066,
+          "max": 209
+        }
+      ]
+    }
+  },
+  {
+    "name": "astronaut",
+    "quality": "balanced",
+    "width": 512,
+    "height": 512,
+    "hueDiagnostic": {
+      "color": [
+        142,
+        106,
+        96
+      ],
+      "max": 159,
+      "rms": 78.87109387897661
+    },
+    "baseline": {
+      "width": 512,
+      "height": 512,
+      "pathCount": 4921,
+      "segmentCount": 31523,
+      "colorCount": 32,
+      "bytes": 1018481,
+      "durationMs": 627.8999999985099,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 33.995800731362934,
+          "pixelsOver24": 0.19319534301757812,
+          "max": 255
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 35.515335961242734,
+          "pixelsOver24": 0.1526021957397461,
+          "max": 250
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 37.39366906189356,
+          "pixelsOver24": 0.13190150260925293,
+          "max": 254
+        }
+      ]
+    },
+    "candidate": {
+      "width": 512,
+      "height": 512,
+      "pathCount": 4664,
+      "segmentCount": 55976,
+      "colorCount": 32,
+      "bytes": 1705776,
+      "durationMs": 2018.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 14.252420632521055,
+          "pixelsOver24": 0.14574432373046875,
+          "max": 207
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 14.34566812426593,
+          "pixelsOver24": 0.14729881286621094,
+          "max": 184
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 14.816357860021858,
+          "pixelsOver24": 0.15318584442138672,
+          "max": 211
+        }
+      ]
+    }
+  },
+  {
+    "name": "astronaut",
+    "quality": "maximum",
+    "width": 512,
+    "height": 512,
+    "hueDiagnostic": {
+      "color": [
+        142,
+        106,
+        96
+      ],
+      "max": 159,
+      "rms": 78.87109387897661
+    },
+    "baseline": {
+      "error": "Ảnh tạo quá nhiều đường vector. Hãy thử Nhanh, ít màu hơn hoặc ảnh nhỏ hơn."
+    },
+    "candidate": {
+      "width": 512,
+      "height": 512,
+      "pathCount": 5297,
+      "segmentCount": 66684,
+      "colorCount": 63,
+      "bytes": 2024685,
+      "durationMs": 1887.3999999985099,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.568920063327708,
+          "pixelsOver24": 0.11707687377929688,
+          "max": 209
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.631764695380618,
+          "pixelsOver24": 0.11759567260742188,
+          "max": 183
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 14.089869188342686,
+          "pixelsOver24": 0.12299895286560059,
+          "max": 207
+        }
+      ]
+    }
+  },
+  {
+    "name": "koi",
+    "quality": "fast",
+    "width": 1254,
+    "height": 1254,
+    "hueDiagnostic": {
+      "color": [
+        184,
+        199,
+        219
+      ],
+      "max": 199,
+      "rms": 80.99006349549981
+    },
+    "baseline": {
+      "width": 1254,
+      "height": 1254,
+      "pathCount": 1507,
+      "segmentCount": 16828,
+      "colorCount": 12,
+      "bytes": 400782,
+      "durationMs": 1349.8999999985099,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 22.829546456465344,
+          "pixelsOver24": 0.05387162992300237,
+          "max": 253
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 23.50423197335984,
+          "pixelsOver24": 0.054020912982761383,
+          "max": 253
+        }
+      ]
+    },
+    "candidate": {
+      "width": 1254,
+      "height": 1254,
+      "pathCount": 1826,
+      "segmentCount": 24095,
+      "colorCount": 12,
+      "bytes": 845821,
+      "durationMs": 2456.199999999255,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 9.342429523620577,
+          "pixelsOver24": 0.03456117457628412,
+          "max": 243
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 10.364853109894494,
+          "pixelsOver24": 0.04094950385242503,
+          "max": 232
+        }
+      ]
+    }
+  },
+  {
+    "name": "koi",
+    "quality": "balanced",
+    "width": 1254,
+    "height": 1254,
+    "hueDiagnostic": {
+      "color": [
+        184,
+        199,
+        219
+      ],
+      "max": 199,
+      "rms": 80.99006349549981
+    },
+    "baseline": {
+      "width": 1254,
+      "height": 1254,
+      "pathCount": 7618,
+      "segmentCount": 58170,
+      "colorCount": 32,
+      "bytes": 1716737,
+      "durationMs": 2414,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 26.334909821188482,
+          "pixelsOver24": 0.0702027833103129,
+          "max": 253
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 27.092683462753534,
+          "pixelsOver24": 0.06542000208582933,
+          "max": 253
+        }
+      ]
+    },
+    "candidate": {
+      "width": 1254,
+      "height": 1254,
+      "pathCount": 3548,
+      "segmentCount": 41523,
+      "colorCount": 32,
+      "bytes": 1361419,
+      "durationMs": 2787.800000000745,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.653387470994064,
+          "pixelsOver24": 0.032028926891681866,
+          "max": 236
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 9.840422061754774,
+          "pixelsOver24": 0.03793093361212223,
+          "max": 223
+        }
+      ]
+    }
+  },
+  {
+    "name": "koi",
+    "quality": "maximum",
+    "width": 1254,
+    "height": 1254,
+    "hueDiagnostic": {
+      "color": [
+        184,
+        199,
+        219
+      ],
+      "max": 199,
+      "rms": 80.99006349549981
+    },
+    "baseline": {
+      "error": "Ảnh tạo quá nhiều đường vector. Hãy thử Nhanh, ít màu hơn hoặc ảnh nhỏ hơn."
+    },
+    "candidate": {
+      "width": 1254,
+      "height": 1254,
+      "pathCount": 3809,
+      "segmentCount": 48572,
+      "colorCount": 63,
+      "bytes": 1600017,
+      "durationMs": 2356.89999999851,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.581555962090224,
+          "pixelsOver24": 0.031092211462395294,
+          "max": 236
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 9.730898918919992,
+          "pixelsOver24": 0.03685956136535336,
+          "max": 228
+        }
+      ]
+    }
+  },
+  {
+    "name": "soft-alpha",
+    "quality": "fast",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 0.9686274509803922,
+      "rms": 0.32127475864298394
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 35,
+      "segmentCount": 231,
+      "colorCount": 9,
+      "bytes": 7586,
+      "durationMs": 71.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.021372596890319097,
+          "compositeRMSE": 4.963156708668622,
+          "pixelsOver24": 0.00860595703125,
+          "max": 89.18823529411763
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.02258779488356838,
+          "compositeRMSE": 5.315075256691107,
+          "pixelsOver24": 0.0102691650390625,
+          "max": 148.23137254901962
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0233332615272494,
+          "compositeRMSE": 5.783310617707367,
+          "pixelsOver24": 0.0120086669921875,
+          "max": 187.05882352941177
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 489,
+      "durationMs": 37.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00007515701593137253,
+          "compositeRMSE": 0.45812345421594497,
+          "pixelsOver24": 0,
+          "max": 2.1999999999999957
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00121406106387841,
+          "compositeRMSE": 0.5809367842704486,
+          "pixelsOver24": 0,
+          "max": 2.5843137254902047
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.001350657145181301,
+          "compositeRMSE": 0.594171194778144,
+          "pixelsOver24": 0,
+          "max": 2.81176470588235
+        }
+      ]
+    }
+  },
+  {
+    "name": "soft-alpha",
+    "quality": "balanced",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 0.9686274509803922,
+      "rms": 0.32127475864298394
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 174,
+      "segmentCount": 899,
+      "colorCount": 30,
+      "bytes": 32209,
+      "durationMs": 82,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.015874885110294026,
+          "compositeRMSE": 5.347576216105295,
+          "pixelsOver24": 0.0242919921875,
+          "max": 92.09411764705882
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.016128540039058187,
+          "compositeRMSE": 6.130038083116366,
+          "pixelsOver24": 0.0247955322265625,
+          "max": 158.90980392156862
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.01658014035691585,
+          "compositeRMSE": 7.160129673284117,
+          "pixelsOver24": 0.027496337890625,
+          "max": 202.95686274509805
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 489,
+      "durationMs": 29.300000000745058,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00007515701593137253,
+          "compositeRMSE": 0.45812345421594497,
+          "pixelsOver24": 0,
+          "max": 2.1999999999999957
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00121406106387841,
+          "compositeRMSE": 0.5809367842704486,
+          "pixelsOver24": 0,
+          "max": 2.5843137254902047
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.001350657145181301,
+          "compositeRMSE": 0.594171194778144,
+          "pixelsOver24": 0,
+          "max": 2.81176470588235
+        }
+      ]
+    }
+  },
+  {
+    "name": "soft-alpha",
+    "quality": "maximum",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 0.9686274509803922,
+      "rms": 0.32127475864298394
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 2017,
+      "segmentCount": 6448,
+      "colorCount": 59,
+      "bytes": 316461,
+      "durationMs": 82.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.026438275505514107,
+          "compositeRMSE": 7.744546098238995,
+          "pixelsOver24": 0.057373046875,
+          "max": 95.24313725490197
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.02678605621935674,
+          "compositeRMSE": 9.097963736463939,
+          "pixelsOver24": 0.0771484375,
+          "max": 157.9921568627451
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.02716450410729181,
+          "compositeRMSE": 10.691001122086105,
+          "pixelsOver24": 0.08240127563476562,
+          "max": 217.13725490196077
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 489,
+      "durationMs": 32,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00007515701593137253,
+          "compositeRMSE": 0.45812345421594497,
+          "pixelsOver24": 0,
+          "max": 2.1999999999999957
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00121406106387841,
+          "compositeRMSE": 0.5809367842704486,
+          "pixelsOver24": 0,
+          "max": 2.5843137254902047
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.001350657145181301,
+          "compositeRMSE": 0.594171194778144,
+          "pixelsOver24": 0,
+          "max": 2.81176470588235
+        }
+      ]
+    }
+  },
+  {
+    "name": "gradient",
+    "quality": "fast",
+    "width": 160,
+    "height": 100,
+    "hueDiagnostic": {
+      "color": [
+        128,
+        128,
+        140
+      ],
+      "max": 128,
+      "rms": 60.597483446097
+    },
+    "baseline": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 13,
+      "segmentCount": 120,
+      "colorCount": 12,
+      "bytes": 2833,
+      "durationMs": 66.60000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 18.70964323550826,
+          "pixelsOver24": 0.555125,
+          "max": 148
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 18.920034988295697,
+          "pixelsOver24": 0.562359375,
+          "max": 225
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 19.118524707182996,
+          "pixelsOver24": 0.56482421875,
+          "max": 228
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 24,
+      "segmentCount": 599,
+      "colorCount": 12,
+      "bytes": 15514,
+      "durationMs": 71.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 17.859912047189184,
+          "pixelsOver24": 0.55475,
+          "max": 58
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 17.92358098172163,
+          "pixelsOver24": 0.56159375,
+          "max": 58
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 17.955181181207838,
+          "pixelsOver24": 0.56366015625,
+          "max": 58
+        }
+      ]
+    }
+  },
+  {
+    "name": "gradient",
+    "quality": "balanced",
+    "width": 160,
+    "height": 100,
+    "hueDiagnostic": {
+      "color": [
+        128,
+        128,
+        140
+      ],
+      "max": 128,
+      "rms": 60.597483446097
+    },
+    "baseline": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 33,
+      "segmentCount": 337,
+      "colorCount": 32,
+      "bytes": 7911,
+      "durationMs": 80,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 12.719102267848939,
+          "pixelsOver24": 0.120375,
+          "max": 161
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.412828902460012,
+          "pixelsOver24": 0.11265625,
+          "max": 240
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.924714894597782,
+          "pixelsOver24": 0.11234765625,
+          "max": 241
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 64,
+      "segmentCount": 1114,
+      "colorCount": 32,
+      "bytes": 26856,
+      "durationMs": 116,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 10.964690488107724,
+          "pixelsOver24": 0.0755,
+          "max": 33
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 11.01997358020124,
+          "pixelsOver24": 0.07940625,
+          "max": 34
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 11.049165044340832,
+          "pixelsOver24": 0.08134765625,
+          "max": 34
+        }
+      ]
+    }
+  },
+  {
+    "name": "gradient",
+    "quality": "maximum",
+    "width": 160,
+    "height": 100,
+    "hueDiagnostic": {
+      "color": [
+        128,
+        128,
+        140
+      ],
+      "max": 128,
+      "rms": 60.597483446097
+    },
+    "baseline": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 65,
+      "segmentCount": 716,
+      "colorCount": 64,
+      "bytes": 15058,
+      "durationMs": 91.69999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 9.317257733188809,
+          "pixelsOver24": 0.0359375,
+          "max": 107
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 9.614585274467121,
+          "pixelsOver24": 0.022015625,
+          "max": 201
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 10.059804245527511,
+          "pixelsOver24": 0.01598828125,
+          "max": 236
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 100,
+      "pathCount": 128,
+      "segmentCount": 1721,
+      "colorCount": 64,
+      "bytes": 38829,
+      "durationMs": 137.09999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.785725453246687,
+          "pixelsOver24": 0.00275,
+          "max": 28
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.852017389393208,
+          "pixelsOver24": 0.00290625,
+          "max": 28
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.885605540450482,
+          "pixelsOver24": 0.0029453125,
+          "max": 28
+        }
+      ]
+    }
+  },
+  {
+    "name": "logo-alpha",
+    "quality": "fast",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        16,
+        112,
+        196
+      ],
+      "max": 0,
+      "rms": 0
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 38.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 32.900000002235174,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    }
+  },
+  {
+    "name": "logo-alpha",
+    "quality": "balanced",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        16,
+        112,
+        196
+      ],
+      "max": 0,
+      "rms": 0
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 27.199999999254942,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 23.699999999254942,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    }
+  },
+  {
+    "name": "logo-alpha",
+    "quality": "maximum",
+    "width": 128,
+    "height": 128,
+    "hueDiagnostic": {
+      "color": [
+        16,
+        112,
+        196
+      ],
+      "max": 0,
+      "rms": 0
+    },
+    "baseline": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 17.600000001490116,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    },
+    "candidate": {
+      "width": 128,
+      "height": 128,
+      "pathCount": 1,
+      "segmentCount": 8,
+      "colorCount": 1,
+      "bytes": 289,
+      "durationMs": 22.599999997764826,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686294,
+          "compositeRMSE": 6.28475629384552,
+          "pixelsOver24": 0.0286865234375,
+          "max": 104.97254901960784
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007158586090686292,
+          "compositeRMSE": 7.025653252898158,
+          "pixelsOver24": 0.028656005859375,
+          "max": 145.88235294117646
+        }
+      ]
+    }
+  },
+  {
+    "name": "portrait",
+    "quality": "fast",
+    "width": 32,
+    "height": 160,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 24.399999998509884,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 16.300000000745058,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "portrait",
+    "quality": "balanced",
+    "width": 32,
+    "height": 160,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 14.399999998509884,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 16.899999998509884,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "portrait",
+    "quality": "maximum",
+    "width": 32,
+    "height": 160,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 18.699999999254942,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 32,
+      "height": 160,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 11.900000002235174,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "landscape",
+    "quality": "fast",
+    "width": 160,
+    "height": 32,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 20.900000002235174,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 15.199999999254942,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "landscape",
+    "quality": "balanced",
+    "width": 160,
+    "height": 32,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 19,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 21.199999999254942,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "landscape",
+    "quality": "maximum",
+    "width": 160,
+    "height": 32,
+    "hueDiagnostic": {
+      "color": [
+        115,
+        105,
+        70
+      ],
+      "max": 85,
+      "rms": 58.73670062235365
+    },
+    "baseline": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 14.399999998509884,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    },
+    "candidate": {
+      "width": 160,
+      "height": 32,
+      "pathCount": 2,
+      "segmentCount": 8,
+      "colorCount": 2,
+      "bytes": 366,
+      "durationMs": 28.900000002235174,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 0,
+          "pixelsOver24": 0,
+          "max": 0
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.3219962675824153,
+          "pixelsOver24": 0.00625,
+          "max": 43
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.5946660029118713,
+          "pixelsOver24": 0.003125,
+          "max": 64
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        109,
+        165
+      ],
+      "max": 165,
+      "rms": 55.69028667210797
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 18,
+      "segmentCount": 78,
+      "colorCount": 6,
+      "bytes": 3579,
+      "durationMs": 98.40000000223517,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.013595401539519181,
+          "compositeRMSE": 10.258226212288086,
+          "pixelsOver24": 0.0249176025390625,
+          "max": 237
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.013022389131430409,
+          "compositeRMSE": 11.645771955401147,
+          "pixelsOver24": 0.017730712890625,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.013234878988823988,
+          "compositeRMSE": 12.977417272601695,
+          "pixelsOver24": 0.014166831970214844,
+          "max": 237
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 5,
+      "segmentCount": 988,
+      "colorCount": 2,
+      "bytes": 27999,
+      "durationMs": 187.80000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007044474283854189,
+          "compositeRMSE": 8.503475420367145,
+          "pixelsOver24": 0.0225067138671875,
+          "max": 232
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0065835840561810155,
+          "compositeRMSE": 9.777225124280791,
+          "pixelsOver24": 0.015323638916015625,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.006568048514571693,
+          "compositeRMSE": 10.94864335801555,
+          "pixelsOver24": 0.011645317077636719,
+          "max": 237
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        109,
+        165
+      ],
+      "max": 165,
+      "rms": 55.69028667210797
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 664,
+      "segmentCount": 1573,
+      "colorCount": 13,
+      "bytes": 99047,
+      "durationMs": 125.79999999701977,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00879815793504901,
+          "compositeRMSE": 9.273645911084603,
+          "pixelsOver24": 0.0219268798828125,
+          "max": 228
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008532206217447783,
+          "compositeRMSE": 10.891977621348884,
+          "pixelsOver24": 0.01647186279296875,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008870079938103275,
+          "compositeRMSE": 12.18744025221053,
+          "pixelsOver24": 0.014067649841308594,
+          "max": 237
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 5,
+      "segmentCount": 850,
+      "colorCount": 2,
+      "bytes": 36134,
+      "durationMs": 444.0999999977648,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0025276333678002643,
+          "compositeRMSE": 3.5138427294800736,
+          "pixelsOver24": 0.0122528076171875,
+          "max": 118.96470588235294
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.002535756429036463,
+          "compositeRMSE": 4.616343408475463,
+          "pixelsOver24": 0.010059356689453125,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0022032906027400815,
+          "compositeRMSE": 5.307061365103754,
+          "pixelsOver24": 0.006442070007324219,
+          "max": 237
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        72,
+        109,
+        165
+      ],
+      "max": 165,
+      "rms": 55.69028667210797
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 664,
+      "segmentCount": 1835,
+      "colorCount": 13,
+      "bytes": 102803,
+      "durationMs": 118.30000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007429534313725527,
+          "compositeRMSE": 7.872736614779435,
+          "pixelsOver24": 0.0211029052734375,
+          "max": 178
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00816623463350182,
+          "compositeRMSE": 10.168069395870782,
+          "pixelsOver24": 0.018463134765625,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00862310820934787,
+          "compositeRMSE": 11.675227673481679,
+          "pixelsOver24": 0.01579570770263672,
+          "max": 237
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 5,
+      "segmentCount": 1395,
+      "colorCount": 2,
+      "bytes": 62596,
+      "durationMs": 1388.300000000745,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0019150079465380043,
+          "compositeRMSE": 2.7257876183914456,
+          "pixelsOver24": 0.0088043212890625,
+          "max": 118.96470588235294
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0019538430606617758,
+          "compositeRMSE": 3.7793161599802105,
+          "pixelsOver24": 0.0078125,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0018118278653013605,
+          "compositeRMSE": 4.583683717042175,
+          "pixelsOver24": 0.005867958068847656,
+          "max": 237
+        }
+      ]
+    }
+  },
+  {
+    "name": "thin-details",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        243,
+        244,
+        247
+      ],
+      "max": 222,
+      "rms": 43.10195162456137
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 51,
+      "segmentCount": 242,
+      "colorCount": 8,
+      "bytes": 8347,
+      "durationMs": 70.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014731433344822286,
+          "compositeRMSE": 16.06719121102414,
+          "pixelsOver24": 0.024932861328125,
+          "max": 255
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.014577633726830488,
+          "compositeRMSE": 17.863303553523934,
+          "pixelsOver24": 0.022735595703125,
+          "max": 255
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.01456903569838585,
+          "compositeRMSE": 19.093790278552227,
+          "pixelsOver24": 0.0205841064453125,
+          "max": 255
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 506,
+      "segmentCount": 3641,
+      "colorCount": 10,
+      "bytes": 54221,
+      "durationMs": 146,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.0851278078958173,
+          "pixelsOver24": 0.0025177001953125,
+          "max": 179
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.310604447520205,
+          "pixelsOver24": 0.01473236083984375,
+          "max": 234
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.84882273054637,
+          "pixelsOver24": 0.013833999633789062,
+          "max": 234
+        }
+      ]
+    }
+  },
+  {
+    "name": "thin-details",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        243,
+        244,
+        247
+      ],
+      "max": 222,
+      "rms": 43.10195162456137
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 328,
+      "segmentCount": 1024,
+      "colorCount": 11,
+      "bytes": 47602,
+      "durationMs": 76.69999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.009248860677083293,
+          "compositeRMSE": 11.372786788965309,
+          "pixelsOver24": 0.0195770263671875,
+          "max": 241
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009055851955039782,
+          "compositeRMSE": 13.953462878775646,
+          "pixelsOver24": 0.021488189697265625,
+          "max": 255
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008968805799297203,
+          "compositeRMSE": 15.521779997590594,
+          "pixelsOver24": 0.019394874572753906,
+          "max": 255
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 506,
+      "segmentCount": 3649,
+      "colorCount": 10,
+      "bytes": 54593,
+      "durationMs": 78.09999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.0834012846991183,
+          "pixelsOver24": 0.0025177001953125,
+          "max": 179
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.310593750545459,
+          "pixelsOver24": 0.01473236083984375,
+          "max": 234
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.848801822337267,
+          "pixelsOver24": 0.013833045959472656,
+          "max": 234
+        }
+      ]
+    }
+  },
+  {
+    "name": "thin-details",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        243,
+        244,
+        247
+      ],
+      "max": 222,
+      "rms": 43.10195162456137
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 328,
+      "segmentCount": 1200,
+      "colorCount": 11,
+      "bytes": 50089,
+      "durationMs": 80.89999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00622779995787372,
+          "compositeRMSE": 9.363368650963956,
+          "pixelsOver24": 0.0127716064453125,
+          "max": 237.98039215686273
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.005976029938342497,
+          "compositeRMSE": 12.00663142332589,
+          "pixelsOver24": 0.019069671630859375,
+          "max": 255
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.005897162942325217,
+          "compositeRMSE": 13.508765441814461,
+          "pixelsOver24": 0.017797470092773438,
+          "max": 255
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 506,
+      "segmentCount": 3666,
+      "colorCount": 10,
+      "bytes": 55318,
+      "durationMs": 122.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.0840054254442935,
+          "pixelsOver24": 0.0025177001953125,
+          "max": 179
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.31081899248096,
+          "pixelsOver24": 0.014728546142578125,
+          "max": 234
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.848840890471404,
+          "pixelsOver24": 0.01383209228515625,
+          "max": 234
+        }
+      ]
+    }
+  },
+  {
+    "name": "touching-colors",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        79,
+        98,
+        132
+      ],
+      "max": 108,
+      "rms": 47.748488423919824
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 5,
+      "segmentCount": 32,
+      "colorCount": 4,
+      "bytes": 1075,
+      "durationMs": 97,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.009283207912071073,
+          "compositeRMSE": 10.820461335174183,
+          "pixelsOver24": 0.017669677734375,
+          "max": 225
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00925472483915442,
+          "compositeRMSE": 12.244575800743021,
+          "pixelsOver24": 0.01348876953125,
+          "max": 230
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009226597056669342,
+          "compositeRMSE": 12.937843636632651,
+          "pixelsOver24": 0.011478424072265625,
+          "max": 230
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 353,
+      "segmentCount": 2697,
+      "colorCount": 12,
+      "bytes": 32323,
+      "durationMs": 77.10000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 1.0424150957132352,
+          "pixelsOver24": 0.001251220703125,
+          "max": 81
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.2816100511383905,
+          "pixelsOver24": 0.003520965576171875,
+          "max": 137
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.7402460918688085,
+          "pixelsOver24": 0.0034627914428710938,
+          "max": 162
+        }
+      ]
+    }
+  },
+  {
+    "name": "touching-colors",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        79,
+        98,
+        132
+      ],
+      "max": 108,
+      "rms": 47.748488423919824
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 310,
+      "segmentCount": 747,
+      "colorCount": 12,
+      "bytes": 42097,
+      "durationMs": 86.69999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007881074793198533,
+          "compositeRMSE": 9.668746574680364,
+          "pixelsOver24": 0.0157470703125,
+          "max": 229
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.007675185858034601,
+          "compositeRMSE": 10.930074950384487,
+          "pixelsOver24": 0.011993408203125,
+          "max": 230
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.007645337721880675,
+          "compositeRMSE": 11.689402138048695,
+          "pixelsOver24": 0.010170936584472656,
+          "max": 230
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 353,
+      "segmentCount": 2702,
+      "colorCount": 12,
+      "bytes": 32538,
+      "durationMs": 85.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 1.0019588358755376,
+          "pixelsOver24": 0.0011138916015625,
+          "max": 75
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.2760033040483623,
+          "pixelsOver24": 0.003536224365234375,
+          "max": 137
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.7405174799742538,
+          "pixelsOver24": 0.0034637451171875,
+          "max": 162
+        }
+      ]
+    }
+  },
+  {
+    "name": "touching-colors",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        79,
+        98,
+        132
+      ],
+      "max": 108,
+      "rms": 47.748488423919824
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 310,
+      "segmentCount": 922,
+      "colorCount": 12,
+      "bytes": 44852,
+      "durationMs": 136.39999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.005354279162837016,
+          "compositeRMSE": 7.480566125653071,
+          "pixelsOver24": 0.01177978515625,
+          "max": 225
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.005151097914751839,
+          "compositeRMSE": 8.692455906552624,
+          "pixelsOver24": 0.009922027587890625,
+          "max": 229
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0050520392025217445,
+          "compositeRMSE": 9.435407155804548,
+          "pixelsOver24": 0.008624076843261719,
+          "max": 230
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 353,
+      "segmentCount": 2707,
+      "colorCount": 12,
+      "bytes": 32770,
+      "durationMs": 93.09999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 1.0061128068677136,
+          "pixelsOver24": 0.0011444091796875,
+          "max": 75
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.2759049736079118,
+          "pixelsOver24": 0.0035247802734375,
+          "max": 137
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0,
+          "compositeRMSE": 2.741502696257963,
+          "pixelsOver24": 0.0034618377685546875,
+          "max": 162
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-layers",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        151,
+        100,
+        131
+      ],
+      "max": 60.6,
+      "rms": 28.324409149606698
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 8,
+      "segmentCount": 50,
+      "colorCount": 8,
+      "bytes": 1803,
+      "durationMs": 117.30000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0026054831112130626,
+          "compositeRMSE": 2.329338230258111,
+          "pixelsOver24": 0.004058837890625,
+          "max": 125.78823529411763
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.002635118073107035,
+          "compositeRMSE": 2.9527642881221254,
+          "pixelsOver24": 0.003482818603515625,
+          "max": 133.79999999999998
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0026399836820700587,
+          "compositeRMSE": 3.2606962469842586,
+          "pixelsOver24": 0.0031414031982421875,
+          "max": 144
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 8,
+      "segmentCount": 49,
+      "colorCount": 8,
+      "bytes": 1731,
+      "durationMs": 80.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.001552028282015941,
+          "compositeRMSE": 2.6701345494497932,
+          "pixelsOver24": 0.005157470703125,
+          "max": 120.56862745098039
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.001526163138595284,
+          "compositeRMSE": 3.38205277080957,
+          "pixelsOver24": 0.0040283203125,
+          "max": 144
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0015367582732555426,
+          "compositeRMSE": 3.7543492383738513,
+          "pixelsOver24": 0.0035867691040039062,
+          "max": 144
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-layers",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        151,
+        100,
+        131
+      ],
+      "max": 60.6,
+      "rms": 28.324409149606698
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 56,
+      "segmentCount": 294,
+      "colorCount": 19,
+      "bytes": 10606,
+      "durationMs": 140.89999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.004538921281402423,
+          "compositeRMSE": 4.914785927787244,
+          "pixelsOver24": 0.009063720703125,
+          "max": 144
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.004552414838004622,
+          "compositeRMSE": 5.558523410647878,
+          "pixelsOver24": 0.00771331787109375,
+          "max": 144
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.004578792347626255,
+          "compositeRMSE": 5.9100131236387226,
+          "pixelsOver24": 0.006999969482421875,
+          "max": 144
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 24,
+      "segmentCount": 94,
+      "colorCount": 17,
+      "bytes": 4210,
+      "durationMs": 135.60000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0026837517233455955,
+          "compositeRMSE": 4.23970680571866,
+          "pixelsOver24": 0.0074615478515625,
+          "max": 135.23529411764704
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0026262021532245643,
+          "compositeRMSE": 4.813959656487702,
+          "pixelsOver24": 0.006103515625,
+          "max": 144
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0026600893806006582,
+          "compositeRMSE": 5.149005751873913,
+          "pixelsOver24": 0.0055980682373046875,
+          "max": 144
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-layers",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        151,
+        100,
+        131
+      ],
+      "max": 60.6,
+      "rms": 28.324409149606698
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 234,
+      "segmentCount": 581,
+      "colorCount": 39,
+      "bytes": 35992,
+      "durationMs": 153.89999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0019738290824138117,
+          "compositeRMSE": 3.2068473731995804,
+          "pixelsOver24": 0.003570556640625,
+          "max": 133.2235294117647
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0019540973738123575,
+          "compositeRMSE": 3.553847510437677,
+          "pixelsOver24": 0.003475189208984375,
+          "max": 144
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0019787208706720074,
+          "compositeRMSE": 3.799316184395878,
+          "pixelsOver24": 0.0032863616943359375,
+          "max": 144
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 231,
+      "segmentCount": 588,
+      "colorCount": 27,
+      "bytes": 35728,
+      "durationMs": 160.89999999850988,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0015424541398590735,
+          "compositeRMSE": 3.2526357623216207,
+          "pixelsOver24": 0.0036773681640625,
+          "max": 133.2235294117647
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0015154969458486514,
+          "compositeRMSE": 3.582716322412333,
+          "pixelsOver24": 0.0035552978515625,
+          "max": 144
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.001537902682435274,
+          "compositeRMSE": 3.8363999406399403,
+          "pixelsOver24": 0.0033702850341796875,
+          "max": 144
+        }
+      ]
+    }
+  },
+  {
+    "name": "radial-gradient",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        138,
+        80,
+        114
+      ],
+      "max": 102,
+      "rms": 37.486074792599005
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 16,
+      "segmentCount": 318,
+      "colorCount": 10,
+      "bytes": 6705,
+      "durationMs": 93.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.014151180491725897,
+          "compositeRMSE": 9.08940602769302,
+          "pixelsOver24": 0.0439453125,
+          "max": 200.04705882352943
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.010926624372890936,
+          "compositeRMSE": 9.626990947402614,
+          "pixelsOver24": 0.023685455322265625,
+          "max": 220
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00982621884818955,
+          "compositeRMSE": 10.599614769078544,
+          "pixelsOver24": 0.014505386352539062,
+          "max": 225
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 17,
+      "segmentCount": 599,
+      "colorCount": 11,
+      "bytes": 10268,
+      "durationMs": 215.09999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.010668885474111631,
+          "compositeRMSE": 7.757595261437952,
+          "pixelsOver24": 0.044952392578125,
+          "max": 170.01176470588234
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.006672818053002466,
+          "compositeRMSE": 7.673178363849669,
+          "pixelsOver24": 0.024585723876953125,
+          "max": 209.1764705882353
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00481132058536225,
+          "compositeRMSE": 8.0467543832083,
+          "pixelsOver24": 0.01395416259765625,
+          "max": 220
+        }
+      ]
+    }
+  },
+  {
+    "name": "radial-gradient",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        138,
+        80,
+        114
+      ],
+      "max": 102,
+      "rms": 37.486074792599005
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 57,
+      "segmentCount": 1309,
+      "colorCount": 23,
+      "bytes": 23902,
+      "durationMs": 367.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.026152248008576285,
+          "compositeRMSE": 11.869206372182338,
+          "pixelsOver24": 0.07476806640625,
+          "max": 218
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.01920273724723894,
+          "compositeRMSE": 12.322955182508748,
+          "pixelsOver24": 0.0418853759765625,
+          "max": 220
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.016397446277250212,
+          "compositeRMSE": 13.416121467502716,
+          "pixelsOver24": 0.025816917419433594,
+          "max": 229
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 49,
+      "segmentCount": 2392,
+      "colorCount": 29,
+      "bytes": 38870,
+      "durationMs": 142.30000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.02751446892233449,
+          "compositeRMSE": 10.449549591166937,
+          "pixelsOver24": 0.10601806640625,
+          "max": 189.8
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.01533022113874393,
+          "compositeRMSE": 8.721913462685583,
+          "pixelsOver24": 0.0577850341796875,
+          "max": 220
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008807948991361255,
+          "compositeRMSE": 7.762566248955697,
+          "pixelsOver24": 0.03001689910888672,
+          "max": 220
+        }
+      ]
+    }
+  },
+  {
+    "name": "radial-gradient",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        138,
+        80,
+        114
+      ],
+      "max": 102,
+      "rms": 37.486074792599005
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 676,
+      "segmentCount": 7768,
+      "colorCount": 63,
+      "bytes": 176440,
+      "durationMs": 283.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.029077746821383886,
+          "compositeRMSE": 13.167935884001729,
+          "pixelsOver24": 0.075836181640625,
+          "max": 199.24705882352941
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.023005556592750897,
+          "compositeRMSE": 14.57837315367935,
+          "pixelsOver24": 0.052539825439453125,
+          "max": 220
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.020843266505819174,
+          "compositeRMSE": 16.674558980800445,
+          "pixelsOver24": 0.03486919403076172,
+          "max": 234
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 706,
+      "segmentCount": 7622,
+      "colorCount": 63,
+      "bytes": 182294,
+      "durationMs": 190.10000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.027901982326131433,
+          "compositeRMSE": 11.166032815664083,
+          "pixelsOver24": 0.08538818359375,
+          "max": 206.9764705882353
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0176705603505997,
+          "compositeRMSE": 10.95678177004662,
+          "pixelsOver24": 0.061382293701171875,
+          "max": 232
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0114123774509815,
+          "compositeRMSE": 10.604280106337617,
+          "pixelsOver24": 0.03330707550048828,
+          "max": 232
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-linear",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.592156862745098,
+      "rms": 0.3760052983031405
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 7,
+      "segmentCount": 249,
+      "colorCount": 6,
+      "bytes": 3402,
+      "durationMs": 115,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.03368111404716435,
+          "compositeRMSE": 6.860875102226131,
+          "pixelsOver24": 0.01983642578125,
+          "max": 79.9529411764706
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.03412451650587068,
+          "compositeRMSE": 7.114342900108136,
+          "pixelsOver24": 0.0195159912109375,
+          "max": 169.17254901960786
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.03437082253270652,
+          "compositeRMSE": 7.323415144621003,
+          "pixelsOver24": 0.018995285034179688,
+          "max": 172.94117647058823
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 453,
+      "durationMs": 27.600000001490116,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00002375584022671567,
+          "compositeRMSE": 0.4469970984638238,
+          "pixelsOver24": 0,
+          "max": 2.5999999999999908
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00002668792126225482,
+          "compositeRMSE": 0.07992380761998293,
+          "pixelsOver24": 0,
+          "max": 1.674509803921577
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000027192807665058118,
+          "compositeRMSE": 0.08249178891532499,
+          "pixelsOver24": 0,
+          "max": 1.7372549019607924
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-linear",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.592156862745098,
+      "rms": 0.3760052983031405
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 179,
+      "segmentCount": 1428,
+      "colorCount": 24,
+      "bytes": 38483,
+      "durationMs": 175.29999999701977,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.017431161917885504,
+          "compositeRMSE": 5.682871376331831,
+          "pixelsOver24": 0.0258026123046875,
+          "max": 109.30980392156863
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.017473542456522717,
+          "compositeRMSE": 6.766271093603529,
+          "pixelsOver24": 0.022365570068359375,
+          "max": 180
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.017620513018703092,
+          "compositeRMSE": 7.701626931828725,
+          "pixelsOver24": 0.019509315490722656,
+          "max": 180
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 453,
+      "durationMs": 20.300000000745058,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00002375584022671567,
+          "compositeRMSE": 0.4469970984638238,
+          "pixelsOver24": 0,
+          "max": 2.5999999999999908
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00002668792126225482,
+          "compositeRMSE": 0.07992380761998293,
+          "pixelsOver24": 0,
+          "max": 1.674509803921577
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000027192807665058118,
+          "compositeRMSE": 0.08249178891532499,
+          "pixelsOver24": 0,
+          "max": 1.7372549019607924
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-linear",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.592156862745098,
+      "rms": 0.3760052983031405
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 2056,
+      "segmentCount": 11459,
+      "colorCount": 63,
+      "bytes": 395741,
+      "durationMs": 273.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.013365023743868712,
+          "compositeRMSE": 4.706842777089208,
+          "pixelsOver24": 0.016754150390625,
+          "max": 108.42745098039215
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.013938784131808947,
+          "compositeRMSE": 5.86130243438108,
+          "pixelsOver24": 0.025043487548828125,
+          "max": 174.8078431372549
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.014121908300390567,
+          "compositeRMSE": 6.858469203876275,
+          "pixelsOver24": 0.02675914764404297,
+          "max": 176.3686274509804
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 453,
+      "durationMs": 44.100000001490116,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00002375584022671567,
+          "compositeRMSE": 0.4469970984638238,
+          "pixelsOver24": 0,
+          "max": 2.5999999999999908
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00002668792126225482,
+          "compositeRMSE": 0.07992380761998293,
+          "pixelsOver24": 0,
+          "max": 1.674509803921577
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000027192807665058118,
+          "compositeRMSE": 0.08249178891532499,
+          "pixelsOver24": 0,
+          "max": 1.7372549019607924
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-ellipse",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.4352941176470588,
+      "rms": 0.4429752385826566
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 45,
+      "segmentCount": 608,
+      "colorCount": 6,
+      "bytes": 12709,
+      "durationMs": 136.69999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.009687356387867295,
+          "compositeRMSE": 3.5356731958168695,
+          "pixelsOver24": 0.0017242431640625,
+          "max": 52.929411764705875
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009966696944885523,
+          "compositeRMSE": 3.6674048710558393,
+          "pixelsOver24": 0.002254486083984375,
+          "max": 81.73333333333332
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.010168670205526071,
+          "compositeRMSE": 3.79908332992187,
+          "pixelsOver24": 0.0025510787963867188,
+          "max": 120.76470588235294
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 496,
+      "durationMs": 41.599999997764826,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00000873640471813725,
+          "compositeRMSE": 0.2663678172124082,
+          "pixelsOver24": 0,
+          "max": 2.4039215686274478
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000008332495595894582,
+          "compositeRMSE": 0.04456744653689235,
+          "pixelsOver24": 0,
+          "max": 1.596078431372547
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00000854192995557595,
+          "compositeRMSE": 0.044639725823702785,
+          "pixelsOver24": 0,
+          "max": 1.5647058823529356
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-ellipse",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.4352941176470588,
+      "rms": 0.4429752385826566
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 127,
+      "segmentCount": 1014,
+      "colorCount": 20,
+      "bytes": 28468,
+      "durationMs": 139.60000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0047000660615807354,
+          "compositeRMSE": 1.949017725561644,
+          "pixelsOver24": 0.0015716552734375,
+          "max": 61.99607843137254
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00498582428576649,
+          "compositeRMSE": 2.1438336298434613,
+          "pixelsOver24": 0.00225067138671875,
+          "max": 108.94117647058822
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.005183455523318669,
+          "compositeRMSE": 2.4069424232692307,
+          "pixelsOver24": 0.003086090087890625,
+          "max": 135.88235294117646
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 496,
+      "durationMs": 49,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00000873640471813725,
+          "compositeRMSE": 0.2663678172124082,
+          "pixelsOver24": 0,
+          "max": 2.4039215686274478
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000008332495595894582,
+          "compositeRMSE": 0.04456744653689235,
+          "pixelsOver24": 0,
+          "max": 1.596078431372547
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00000854192995557595,
+          "compositeRMSE": 0.044639725823702785,
+          "pixelsOver24": 0,
+          "max": 1.5647058823529356
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-ellipse",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        30,
+        80,
+        200
+      ],
+      "max": 1.4352941176470588,
+      "rms": 0.4429752385826566
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 2983,
+      "segmentCount": 10404,
+      "colorCount": 63,
+      "bytes": 494773,
+      "durationMs": 236.5,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.006359982958026585,
+          "compositeRMSE": 3.097327291152913,
+          "pixelsOver24": 0.0084991455078125,
+          "max": 63.68627450980392
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.006908970253138001,
+          "compositeRMSE": 3.7648707358285005,
+          "pixelsOver24": 0.015350341796875,
+          "max": 111.17647058823529
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.007158810484638336,
+          "compositeRMSE": 4.404412234348124,
+          "pixelsOver24": 0.01836872100830078,
+          "max": 146.69803921568626
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1,
+      "segmentCount": 5,
+      "colorCount": 1,
+      "bytes": 496,
+      "durationMs": 41.29999999701977,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.00000873640471813725,
+          "compositeRMSE": 0.2663678172124082,
+          "pixelsOver24": 0,
+          "max": 2.4039215686274478
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.000008332495595894582,
+          "compositeRMSE": 0.04456744653689235,
+          "pixelsOver24": 0,
+          "max": 1.596078431372547
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00000854192995557595,
+          "compositeRMSE": 0.044639725823702785,
+          "pixelsOver24": 0,
+          "max": 1.5647058823529356
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-shadow",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        29,
+        79,
+        200
+      ],
+      "max": 5.8431372549019605,
+      "rms": 0.9523437783256898
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 17,
+      "segmentCount": 235,
+      "colorCount": 11,
+      "bytes": 5630,
+      "durationMs": 126.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0048037659888173065,
+          "compositeRMSE": 2.9403274537608683,
+          "pixelsOver24": 0.0070648193359375,
+          "max": 113.07058823529411
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.006464161592368586,
+          "compositeRMSE": 3.7699859704483814,
+          "pixelsOver24": 0.007740020751953125,
+          "max": 184.2980392156863
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.006432787577306776,
+          "compositeRMSE": 4.053334022267694,
+          "pixelsOver24": 0.0069217681884765625,
+          "max": 217.13725490196077
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 19,
+      "segmentCount": 281,
+      "colorCount": 11,
+      "bytes": 6969,
+      "durationMs": 69.69999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.004868810317095492,
+          "compositeRMSE": 2.6638750822457533,
+          "pixelsOver24": 0.0065765380859375,
+          "max": 58.06666666666666
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.0059418322993234265,
+          "compositeRMSE": 3.117822629465296,
+          "pixelsOver24": 0.007549285888671875,
+          "max": 75.88235294117646
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.005617497014060446,
+          "compositeRMSE": 2.990185602289035,
+          "pixelsOver24": 0.005695343017578125,
+          "max": 101.01960784313725
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-shadow",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        29,
+        79,
+        200
+      ],
+      "max": 5.8431372549019605,
+      "rms": 0.9523437783256898
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 72,
+      "segmentCount": 1093,
+      "colorCount": 31,
+      "bytes": 22081,
+      "durationMs": 188.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.007162954293045099,
+          "compositeRMSE": 4.780552631077242,
+          "pixelsOver24": 0.0218963623046875,
+          "max": 112.94117647058823
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009043465408621667,
+          "compositeRMSE": 5.822738521603724,
+          "pixelsOver24": 0.02077484130859375,
+          "max": 186.45882352941177
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008863262101719399,
+          "compositeRMSE": 6.413763118983716,
+          "pixelsOver24": 0.017984390258789062,
+          "max": 224.32941176470587
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 94,
+      "segmentCount": 1125,
+      "colorCount": 31,
+      "bytes": 26066,
+      "durationMs": 125,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0064164105583636435,
+          "compositeRMSE": 4.091234886916421,
+          "pixelsOver24": 0.0180206298828125,
+          "max": 90.19607843137254
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.007837856517116288,
+          "compositeRMSE": 4.705836362087374,
+          "pixelsOver24": 0.018585205078125,
+          "max": 105.07843137254902
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.007004423702459642,
+          "compositeRMSE": 4.684095630687527,
+          "pixelsOver24": 0.014181137084960938,
+          "max": 105.08235294117647
+        }
+      ]
+    }
+  },
+  {
+    "name": "alpha-shadow",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        29,
+        79,
+        200
+      ],
+      "max": 5.8431372549019605,
+      "rms": 0.9523437783256898
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 516,
+      "segmentCount": 3469,
+      "colorCount": 63,
+      "bytes": 104692,
+      "durationMs": 191.80000000074506,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0067292456533390894,
+          "compositeRMSE": 4.842057676024217,
+          "pixelsOver24": 0.018280029296875,
+          "max": 115.95686274509804
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009315161611516696,
+          "compositeRMSE": 6.265182210557636,
+          "pixelsOver24": 0.021587371826171875,
+          "max": 182.19607843137254
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.009293354258821903,
+          "compositeRMSE": 7.018681530979517,
+          "pixelsOver24": 0.019552230834960938,
+          "max": 224.32941176470587
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 343,
+      "segmentCount": 3034,
+      "colorCount": 42,
+      "bytes": 78405,
+      "durationMs": 110.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0.0064299340341601695,
+          "compositeRMSE": 4.8705867478178,
+          "pixelsOver24": 0.0167083740234375,
+          "max": 145.31764705882352
+        },
+        {
+          "scale": 2,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.00883458455403404,
+          "compositeRMSE": 6.272205523823058,
+          "pixelsOver24": 0.01956939697265625,
+          "max": 190.64313725490197
+        },
+        {
+          "scale": 4,
+          "reference": "vector ground truth",
+          "alphaMAE": 0.008472951253256956,
+          "compositeRMSE": 6.773727759756345,
+          "pixelsOver24": 0.015915870666503906,
+          "max": 192.3764705882353
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves-jpeg",
+    "quality": "fast",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        35,
+        52,
+        80
+      ],
+      "max": 220,
+      "rms": 70.9738481382229
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 123,
+      "segmentCount": 926,
+      "colorCount": 10,
+      "bytes": 25786,
+      "durationMs": 98.60000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.041901380155446,
+          "pixelsOver24": 0.0447845458984375,
+          "max": 223
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 13.508343931959176,
+          "pixelsOver24": 0.042011260986328125,
+          "max": 237
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 14.36432263324713,
+          "pixelsOver24": 0.039574623107910156,
+          "max": 241
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 144,
+      "segmentCount": 1647,
+      "colorCount": 9,
+      "bytes": 49794,
+      "durationMs": 132.19999999925494,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 6.963069681983575,
+          "pixelsOver24": 0.0324554443359375,
+          "max": 168
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.000373116375304,
+          "pixelsOver24": 0.03868865966796875,
+          "max": 180
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.564727846072568,
+          "pixelsOver24": 0.039806365966796875,
+          "max": 206
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves-jpeg",
+    "quality": "balanced",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        35,
+        52,
+        80
+      ],
+      "max": 220,
+      "rms": 70.9738481382229
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 1079,
+      "segmentCount": 4944,
+      "colorCount": 31,
+      "bytes": 192134,
+      "durationMs": 182.60000000149012,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 22.58956072579057,
+          "pixelsOver24": 0.0902557373046875,
+          "max": 240
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 23.1884863301793,
+          "pixelsOver24": 0.07794570922851562,
+          "max": 239
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 24.163831092835615,
+          "pixelsOver24": 0.06764793395996094,
+          "max": 248
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 266,
+      "segmentCount": 2647,
+      "colorCount": 21,
+      "bytes": 75546,
+      "durationMs": 161.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 6.694326368937666,
+          "pixelsOver24": 0.031463623046875,
+          "max": 138
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.651896665065158,
+          "pixelsOver24": 0.036754608154296875,
+          "max": 167
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.196169992296577,
+          "pixelsOver24": 0.038112640380859375,
+          "max": 187
+        }
+      ]
+    }
+  },
+  {
+    "name": "curves-jpeg",
+    "quality": "maximum",
+    "width": 256,
+    "height": 256,
+    "hueDiagnostic": {
+      "color": [
+        35,
+        52,
+        80
+      ],
+      "max": 220,
+      "rms": 70.9738481382229
+    },
+    "baseline": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 5654,
+      "segmentCount": 18073,
+      "colorCount": 64,
+      "bytes": 820937,
+      "durationMs": 544.5999999977648,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 26.399695527604013,
+          "pixelsOver24": 0.1244354248046875,
+          "max": 248
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 27.611713165773953,
+          "pixelsOver24": 0.10445785522460938,
+          "max": 246
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 29.02307446861582,
+          "pixelsOver24": 0.08804988861083984,
+          "max": 249
+        }
+      ]
+    },
+    "candidate": {
+      "width": 256,
+      "height": 256,
+      "pathCount": 278,
+      "segmentCount": 2984,
+      "colorCount": 33,
+      "bytes": 87385,
+      "durationMs": 127.59999999776483,
+      "scales": [
+        {
+          "scale": 1,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 6.621332653015405,
+          "pixelsOver24": 0.03106689453125,
+          "max": 151
+        },
+        {
+          "scale": 2,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 7.549961677774008,
+          "pixelsOver24": 0.036197662353515625,
+          "max": 167
+        },
+        {
+          "scale": 4,
+          "reference": "decoded raster",
+          "alphaMAE": 0,
+          "compositeRMSE": 8.109958439041181,
+          "pixelsOver24": 0.037642478942871094,
+          "max": 188
+        }
+      ]
+    }
+  }
+]

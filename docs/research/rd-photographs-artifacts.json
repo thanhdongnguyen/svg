@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-09-14",
+  "scope": "Artifact byte measurement only; no downloaded code executed or installed; not a conversion benchmark",
+  "method": "Read npm package tarball in memory; extract named file bytes; len(data); gzip.compress(data, compresslevel=9, mtime=0); hashlib.sha256(data)",
+  "package": "img2num",
+  "version": "0.4.2",
+  "registry": "https://registry.npmjs.org/img2num/0.4.2",
+  "tarball": "https://registry.npmjs.org/img2num/-/img2num-0.4.2.tgz",
+  "integrity": "sha512-eEwaSE5w9pcH0nVW26Clfon3lwc3rFRlUslms/qfnZeDfFWlzewgCMGOlKFMwf8RQ4aY35IUXk6jkRzSgeaAXA==",
+  "artifacts": [
+    {
+      "path": "package/dist/browser/img2num.js",
+      "bytes": 106905,
+      "gzip9Bytes": 24131,
+      "sha256": "3fdd072d71b9a503b6b31493be3935f398955215097edbf83112a9996c2fc44d"
+    },
+    {
+      "path": "package/dist/browser/img2num.wasm",
+      "bytes": 540053,
+      "gzip9Bytes": 165101,
+      "sha256": "c09fc2e407bbe3f6c89656fc30c43e422f81238945abe1bb5b855573d050ed39"
+    }
+  ],
+  "sourceSnapshots": [
+    { "repository": "Ryan-Millard/Img2Num", "commit": "27eda01d7c52b200114f95a666ff134c4bb5fb67" },
+    { "repository": "sjtuplayer/SuperSVG", "commit": "6c3d45b435e0cc7ca0de3976d4d1aef6b50111a1" },
+    { "repository": "SZUVIZ/layered_vectorization", "commit": "1224d0a299015752a43ad5daacd40f460f04f0db" },
+    { "repository": "swiftsketch/SwiftSketch", "commit": "6f9fa8654711b9a5d3022b08a59835f0dda08f40" },
+    { "repository": "decade-de/COVec", "commit": "bca314adf83a11c8309d5a7001d09a01bd21cd2a" }
+  ]
+}

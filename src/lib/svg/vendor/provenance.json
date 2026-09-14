@@ -1,0 +1,37 @@
+{
+  "package": "@visioncortex/vtracer",
+  "version": "1.0.0-alpha.4",
+  "license": "MIT OR Apache-2.0",
+  "tarball": "https://registry.npmjs.org/@visioncortex/vtracer/-/vtracer-1.0.0-alpha.4.tgz",
+  "npmIntegrityVerified": true,
+  "npmIntegrity": "sha512-Hhi+vfG4ealLH1m9alrWo1lM00cWFfur4zeLEcNtzrYUjeEYTgukLNfvOXmuaGe2adugu+jl9o9IUzqHuqFO9g==",
+  "modification": "Only two CommonJS export assignments changed to ESM exports; fs-based synchronous initializer replaced with explicit WASM-bytes async init. WASM bytes unchanged.",
+  "files": {
+    "package.tgz": {
+      "bytes": 287332,
+      "gzip9Bytes": 287357,
+      "sha256": "002c33241a0c7b5bee47fd2f29eb4f6b2978750e4b7e913c4820d7a74c481495"
+    },
+    "package/pkg/vtracer_wasm.js": {
+      "bytes": 14925,
+      "gzip9Bytes": 3571,
+      "sha256": "e1855e9bb29d785344f672abdc692ca90ffa7ed863b9186b51c4e95a2a7dc17d"
+    },
+    "vtracer-browser.mjs": {
+      "bytes": 15059,
+      "gzip9Bytes": 3627,
+      "sha256": "43debc0fa88825abbc4ffc52d3b2d45540ed5139ed2e717b9ba00e845af74536"
+    },
+    "vtracer_wasm_bg.wasm": {
+      "bytes": 668378,
+      "gzip9Bytes": 278006,
+      "sha256": "63716b70497b7468ef97545b50f5f34b8bbb7acde2d7b00deb4eb40781446d45"
+    }
+  },
+  "shippedBinding": {
+    "path": "src/lib/svg/vendor/vtracer.mjs",
+    "bytes": 15158,
+    "sha256": "30f76bfb3bb486c41daa8e6a4e1cb9e7e002a3f227a25862503b981bd1a23f70",
+    "additionalChange": "ESLint generated-binding header only"
+  }
+}

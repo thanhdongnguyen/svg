@@ -1,0 +1,32 @@
+[
+  {
+    "file": "corrupt.png",
+    "errorShown": true,
+    "downloadAbsent": true,
+    "message": "Chưa thể xử lý ảnhTệp không phải ảnh PNG hoặc JPG hợp lệ. Đổi tên đuôi tệp không chuyển được định dạng."
+  },
+  {
+    "file": "empty.png",
+    "errorShown": true,
+    "downloadAbsent": true,
+    "message": "Chưa thể xử lý ảnhTệp đang rỗng. Hãy chọn một ảnh khác."
+  },
+  {
+    "file": "oversized-header.png",
+    "errorShown": true,
+    "downloadAbsent": true,
+    "message": "Chưa thể xử lý ảnhẢnh quá lớn. Hãy giảm xuống tối đa 4 megapixel và 4096 px mỗi cạnh."
+  },
+  {
+    "file": "too-many-bytes.png",
+    "errorShown": true,
+    "downloadAbsent": true,
+    "message": "Chưa thể xử lý ảnhTệp vượt quá 10 MB. Hãy giảm dung lượng rồi thử lại."
+  },
+  {
+    "file": "unsupported.gif",
+    "errorShown": true,
+    "downloadAbsent": true,
+    "message": "Chưa thể xử lý ảnhChỉ hỗ trợ PNG, JPG và JPEG. Hãy chọn đúng định dạng ảnh."
+  }
+]

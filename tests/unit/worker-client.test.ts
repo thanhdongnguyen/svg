@@ -1,0 +1,18 @@
+import { afterEach, it, expect, vi } from 'vitest';
+import { WorkerClient, ConversionCancelled } from '../../src/lib/svg/worker-client';
+import { DEFAULT_SETTINGS } from '../../src/lib/svg/settings';
+class FakeWorker {
+ onmessage: Worker['onmessage']=null;onerror:Worker['onerror']=null;onmessageerror:Worker['onmessageerror']=null;
+ terminate=vi.fn();postMessage=vi.fn();
+ emit(data:unknown){this.onmessage?.call(this as unknown as Worker,{data} as MessageEvent);}
+}
+const file=new File(['test'],'a.png',{type:'image/png'});
+afterEach(()=>vi.useRealTimers());
+it('reports stages and resolves only the matching job',async()=>{const worker=new FakeWorker();const client=new WorkerClient(()=>worker as unknown as Worker);const stage=vi.fn();const result={svg:'<svg/>',metrics:{},warnings:[]};const pending=client.run(file,DEFAULT_SETTINGS,stage);worker.emit({id:999,type:'error',message:'stale'});worker.emit({id:1,type:'stage',stage:'tracing'});worker.emit({id:1,type:'result',result});expect(await pending).toEqual(result);expect(stage).toHaveBeenCalledWith('tracing');expect(worker.terminate).not.toHaveBeenCalled();client.dispose();expect(worker.terminate).toHaveBeenCalledOnce();});
+it('cancels immediately and terminates the worker',async()=>{const w=new FakeWorker();const c=new WorkerClient(()=>w as unknown as Worker);const p=c.run(file,DEFAULT_SETTINGS,()=>{});const checked=expect(p).rejects.toBeInstanceOf(ConversionCancelled);c.cancel();await checked;expect(w.terminate).toHaveBeenCalledOnce();});
+it('times out unresponsive work and cleans its timer',async()=>{vi.useFakeTimers();const w=new FakeWorker();const c=new WorkerClient(()=>w as unknown as Worker,50);const checked=expect(c.run(file,DEFAULT_SETTINGS,()=>{})).rejects.toThrow(/30 giây/);await vi.advanceTimersByTimeAsync(50);await checked;expect(w.terminate).toHaveBeenCalledOnce();expect(vi.getTimerCount()).toBe(0);});
+it('handles worker errors and can retry',async()=>{const ws:FakeWorker[]=[];const c=new WorkerClient(()=>{const w=new FakeWorker();ws.push(w);return w as unknown as Worker;});const p=c.run(file,DEFAULT_SETTINGS,()=>{});const checked=expect(p).rejects.toThrow(/gặp lỗi/);ws[0].onerror?.call(ws[0] as unknown as Worker,{} as ErrorEvent);await checked;const next=c.run(file,DEFAULT_SETTINGS,()=>{});ws[1].emit({id:2,type:'result',result:{svg:'new'}});expect(await next).toMatchObject({svg:'new'});});
+it('a late error from a cancelled worker cannot destroy its replacement',async()=>{const ws:FakeWorker[]=[];const c=new WorkerClient(()=>{const w=new FakeWorker();ws.push(w);return w as unknown as Worker;});const p=c.run(file,DEFAULT_SETTINGS,()=>{});const checked=expect(p).rejects.toBeInstanceOf(ConversionCancelled);const staleError=ws[0].onerror;const next=c.run(file,DEFAULT_SETTINGS,()=>{});await checked;staleError?.call(ws[0] as unknown as Worker,{} as ErrorEvent);expect(ws[1].terminate).not.toHaveBeenCalled();ws[1].emit({id:2,type:'result',result:{svg:'new'}});await expect(next).resolves.toMatchObject({svg:'new'});});
+it('handles a worker constructor failure',async()=>{const c=new WorkerClient(()=>{throw Error('unsupported');});await expect(c.run(file,DEFAULT_SETTINGS,()=>{})).rejects.toThrow(/khởi tạo/);});
+
+it('reuses a completed worker without another script request',async()=>{const w=new FakeWorker();const factory=vi.fn(()=>w as unknown as Worker);const c=new WorkerClient(factory);const a=c.run(file,DEFAULT_SETTINGS,()=>{});w.emit({id:1,type:'result',result:{svg:'first'}});await a;c.cancel();const b=c.run(file,DEFAULT_SETTINGS,()=>{});w.emit({id:2,type:'result',result:{svg:'second'}});await expect(b).resolves.toMatchObject({svg:'second'});expect(factory).toHaveBeenCalledOnce();c.dispose();});

@@ -1,0 +1,106 @@
+{
+  "purpose": "Counterexample to unique original-SVG recovery; not vectorizer benchmark",
+  "generatedAt": "2026-09-14T08:30:43.317Z",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "sourceStringsDiffer": true,
+  "sourceA": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\"><rect width=\"64\" height=\"64\" fill=\"#ff0000\"/></svg>",
+  "sourceB": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"12\" fill=\"#0000ff\"/><rect width=\"64\" height=\"64\" fill=\"#ff0000\"/></svg>",
+  "sourceASha256": "e59bcbd5ec88fda14ab804839c5b859e9f2dbfbab87cb445d4bb95402a87260f",
+  "sourceBSha256": "1a166506f33dcb3de7eb5064caecde8a6955350348fc88a4df3e5b93f5a04a41",
+  "samples": [
+    {
+      "scale": 1,
+      "width": 64,
+      "height": 64,
+      "rgbaBytesPerImage": 16384,
+      "differingRgbaComponents": 0,
+      "rgbaASha256": "0bcc07de1631aa0395013f35790f719bd754f61e4bb2847a86fdc2365d3d8d63",
+      "rgbaBSha256": "0bcc07de1631aa0395013f35790f719bd754f61e4bb2847a86fdc2365d3d8d63",
+      "encoded": [
+        {
+          "requestedType": "image/png",
+          "actualTypeA": "image/png",
+          "actualTypeB": "image/png",
+          "bytesA": 277,
+          "bytesB": 277,
+          "differingBytes": 0,
+          "sha256A": "9182fcc8431ed52889713159efa32178142066604d9d0fc6a144d3e241820523",
+          "sha256B": "9182fcc8431ed52889713159efa32178142066604d9d0fc6a144d3e241820523"
+        },
+        {
+          "requestedType": "image/jpeg",
+          "actualTypeA": "image/jpeg",
+          "actualTypeB": "image/jpeg",
+          "bytesA": 786,
+          "bytesB": 786,
+          "differingBytes": 0,
+          "sha256A": "cdf3c320007bdf841cbb798eaba1de52aabd2868bb43e3473dc7527daf02077c",
+          "sha256B": "cdf3c320007bdf841cbb798eaba1de52aabd2868bb43e3473dc7527daf02077c"
+        }
+      ]
+    },
+    {
+      "scale": 2,
+      "width": 128,
+      "height": 128,
+      "rgbaBytesPerImage": 65536,
+      "differingRgbaComponents": 0,
+      "rgbaASha256": "51b820e2df0643a56b6cc7d6700c5181dbab746528f60bdafcf10ab8a108f0c2",
+      "rgbaBSha256": "51b820e2df0643a56b6cc7d6700c5181dbab746528f60bdafcf10ab8a108f0c2",
+      "encoded": [
+        {
+          "requestedType": "image/png",
+          "actualTypeA": "image/png",
+          "actualTypeB": "image/png",
+          "bytesA": 866,
+          "bytesB": 866,
+          "differingBytes": 0,
+          "sha256A": "7d936c925be8f5ae2ea7b08d75996931dc00240ac911f33433a8ef0a2812ab5d",
+          "sha256B": "7d936c925be8f5ae2ea7b08d75996931dc00240ac911f33433a8ef0a2812ab5d"
+        },
+        {
+          "requestedType": "image/jpeg",
+          "actualTypeA": "image/jpeg",
+          "actualTypeB": "image/jpeg",
+          "bytesA": 858,
+          "bytesB": 858,
+          "differingBytes": 0,
+          "sha256A": "d0c89d7c3ad6152061427df74eae66e504a052738c5eba06b2d033ef5b99cd09",
+          "sha256B": "d0c89d7c3ad6152061427df74eae66e504a052738c5eba06b2d033ef5b99cd09"
+        }
+      ]
+    },
+    {
+      "scale": 4,
+      "width": 256,
+      "height": 256,
+      "rgbaBytesPerImage": 262144,
+      "differingRgbaComponents": 0,
+      "rgbaASha256": "b8b9b478324141d9331328a2150e74ec5feb266a743a51cab73d903247247ea4",
+      "rgbaBSha256": "b8b9b478324141d9331328a2150e74ec5feb266a743a51cab73d903247247ea4",
+      "encoded": [
+        {
+          "requestedType": "image/png",
+          "actualTypeA": "image/png",
+          "actualTypeB": "image/png",
+          "bytesA": 2370,
+          "bytesB": 2370,
+          "differingBytes": 0,
+          "sha256A": "76506929655aeaa54784cacd4fe64e8ab3b3d3c61b5967683ccc5c220b4acd66",
+          "sha256B": "76506929655aeaa54784cacd4fe64e8ab3b3d3c61b5967683ccc5c220b4acd66"
+        },
+        {
+          "requestedType": "image/jpeg",
+          "actualTypeA": "image/jpeg",
+          "actualTypeB": "image/jpeg",
+          "bytesA": 1146,
+          "bytesB": 1146,
+          "differingBytes": 0,
+          "sha256A": "2c6a678a203e58a18b03e147b0442fd82c95ddf74a8fbfe97f07ee279f08d9d6",
+          "sha256B": "2c6a678a203e58a18b03e147b0442fd82c95ddf74a8fbfe97f07ee279f08d9d6"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

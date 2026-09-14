@@ -30,9 +30,6 @@ Use the existing package manager and project configuration. Do not introduce ano
 ```text
 src/
 ├── app/
-│   ├── api/
-│   │   └── convert/
-│   │       └── route.ts          # Optional server-side conversion endpoint
 │   ├── layout.tsx
 │   ├── page.tsx
 │   └── globals.css               # Global tokens and Tailwind theme
@@ -74,8 +71,8 @@ Create directories only when they are needed. Avoid empty placeholder modules.
 ## Architecture Guidelines
 
 - Keep the conversion engine separate from React components. Code under `lib/image` and `lib/svg` must not depend on UI state.
-- Prefer local browser processing for privacy and fast iteration. Use a Web Worker for CPU-heavy conversion so the interface remains responsive.
-- Add a server-side conversion route only when the chosen vectorization engine cannot run reliably in the browser or needs native dependencies.
+- All conversion runs locally in a Web Worker. The site is a Next.js static export (`output: "export"`), with no login or image upload service.
+- Do not add conversion API routes or server fallbacks. Browser-only processing is an explicit product constraint.
 - Treat conversion as a staged pipeline: validate, decode, preprocess, trace, simplify, optimize, serialize, and measure.
 - Make pipeline stages independently testable and use typed inputs and outputs.
 - Revoke temporary object URLs and release image or canvas resources after use.
@@ -129,6 +126,7 @@ Provide sensible quality presets:
 
 ## ShadCN Conventions
 
+- For every UI change, follow the established design system exactly and use the installed `shadcn` skill to discover, install, and compose from the full shadcn/ui component catalog; do not create a custom UI component or a custom replacement for an existing shadcn/ui component without explicit user approval.
 - Use `pnpm dlx shadcn@latest` for all ShadCN CLI operations.
 - Check installed components before adding new ones.
 - Read the current component documentation before implementing a ShadCN component.
@@ -141,9 +139,13 @@ Provide sensible quality presets:
 Every material change should pass the relevant checks:
 
 ```bash
+pnpm run test
 pnpm run lint
+pnpm run typecheck
 pnpm run build
 ```
+
+- Every feature must be tested end-to-end with Codex's `@Browser` (`browser@openai-bundled`), including visual inspection of the rendered UI; do not use Agent Browser as a substitute, and do not consider a feature complete based only on source review, lint, build, or non-visual automated tests.
 
 Add targeted tests for the conversion engine. At minimum, cover:
 
@@ -176,3 +178,26 @@ Use visual regression fixtures for quality-sensitive changes. Compare rendered S
 - Keep the default workflow functional after every change.
 - Do not commit generated build output, uploaded images, temporary previews, or private test assets.
 - Update this document when the architecture, supported formats, conversion engine, or required quality gates change.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+
+## Current Conversion Implementation
+
+- `src/lib/svg/convert-raster.ts` dispatches the browser-worker pipeline. Opaque color images with more than four distinct RGB colors use pinned VTracer 1.0.0-alpha.4 WASM (`MIT OR Apache-2.0`; the MIT notice is included). The adapter and provenance live in `src/lib/svg/vendor/`; preserve the upstream notice and artifact hashes when updating them. This is an alpha release, not a blanket stability or fidelity guarantee.
+- VTracer is initialized lazily from the same-origin static file `/engines/vtracer-1.0.0-alpha.4.wasm` (668,378 bytes). It is an engine download, never an image-conversion API or image upload. No CDN, conversion route, or server fallback is involved. A retained worker can reuse initialized WASM; a new worker may need to fetch the asset again.
+- Opaque tracing combines stacked underpainting with cutout paths and maps all final solid paints to the selected deterministic palette. A color-coverage sanity check retries quantized input with color merging disabled when needed; this check does not establish spatial fidelity. Uniform, one-dimensional, monochrome and small exact-palette cases retain their specialized/baseline paths.
+- Eligible transparent flat-color artwork uses `trace-antialias.ts`: at most eight inferred paints, strict per-pixel color fits, opaque/transparent regions and a narrow antialias fringe. Most soft pixels must be within two pixels of both transparent and pure opaque regions; a bounded taper-tip exception allows a few farther pixels. Broad soft alpha, unsupported color detail and insufficient flat-color support are rejected. Multi-paint images add an existing-palette underpaint inside a one-pixel 3x3 erosion of the fully opaque source region, preventing interior seams while preserving the outer soft fringe and real holes. That trace reuses the buffer and counts toward aggregate path/segment/byte limits. Coverage is supersampled by at most 2x/4x/8x for Fast/Balanced/Maximum, capped at 4,194,304 internal pixels (16 MiB for the temporary RGBA buffer). Below 2x it defers to another strategy. Export only the verified black BW contours, recolored and divided into original coordinates; never export the temporary white tracing background.
+- Non-exact single-color soft-alpha input first tries `fit-alpha-gradient.ts`: a linear alpha ramp or conical radial alpha profile with an affine ellipse transform. It checks every source pixel before accepting native SVG: alpha MAE <= 0.75/255, maximum alpha error <= 1.5/255, black/white composite RMSE <= 0.8, maximum composite channel error <= 2 (0-255 scale). These are model-fit limits, not guarantees about the browser-rendered output. Unsupported profiles or unmodeled detail must fall through rather than be presented as recovered gradients.
+- A qualifying single-color soft mask that fails native fitting can use cumulative ImageTracer alpha masks (up to 12/24/32 levels, also bounded by the selected color budget). Other transparency/color cases fall back to pinned ImageTracerJS 1.2.6 (Unlicense), an older JS baseline. Its palette quantizer measures centered premultiplied/composited color, preserves alpha endpoints and does not re-cluster straight RGBA or blur afterward. Exact small palettes retain original RGBA. Outer contours and holes use the same coordinate precision; one-dimensional and uniform images use rectangular runs to avoid zero-area contours.
+- SVGO 4.1.0 (MIT) removes nonvisual metadata only. DOMPurify 3.4.15 (Apache-2.0 OR MPL-2.0) and an explicit allowlist validate structure/attributes before and after cleaning. Besides SVG/path output, permit only one owned `alpha-gradient` inside one `defs`, either a validated linear/radial gradient with exactly two stops, and its exact local path-fill reference. External URLs, hrefs, images, filters, masks and arbitrary groups remain forbidden.
+- Current limits: input 10 MiB, 4,000,000 pixels, 4096 px/side; up to 64 colors; worker deadline 30 s; output 5 MiB, 12,000 paths, 120,000 path segments. Preview decode has a 5 s per-image deadline. Supersampling's buffer cap does not include all JS/WASM allocations. These are application limits, not a guarantee against device memory pressure.
+- Photos, textured/multicolor gradients, overlapping fractional-alpha paints and fine details remain approximations. Cumulative alpha can still band; reconstructed antialias edges can move or round very sharp tips. Maximum is not guaranteed to outperform every other preset. Do not claim mathematically lossless conversion, original SVG recovery, or universal high fidelity from passing functional tests.
+- `scripts/generate-fixtures.mts` creates reproducible synthetic inputs. For actual worker/browser quality comparisons, run `node --import tsx scripts/prepare-quality-lab.mts --directory /tmp/svg-quality-lab-review --snapshot` before engine edits; rerun without `--snapshot` after edits to preserve the worker baseline. Serve that directory with `python3 -m http.server 4175 --bind 127.0.0.1 --directory /tmp/svg-quality-lab-review`, open it in Codex @Browser, run the corpus and inspect white/black backgrounds at multiple zooms. Optional `--photo` accepts a local licensed PNG. A new snapshot is the current worker, not historical evidence. The older `prepare-browser-qa.mts` page tests the JS path directly and does not replace the worker lab. Keep generated fixtures, lab bundles/results and `out/` untracked; record inspected evidence and limitations in the testing report.

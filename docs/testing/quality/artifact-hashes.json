@@ -1,0 +1,24 @@
+{
+  "public/engines/vtracer-1.0.0-alpha.4.wasm": {
+    "bytes": 668378,
+    "sha256": "63716b70497b7468ef97545b50f5f34b8bbb7acde2d7b00deb4eb40781446d45"
+  },
+  "src/lib/svg/vendor/vtracer.mjs": {
+    "bytes": 15158,
+    "sha256": "30f76bfb3bb486c41daa8e6a4e1cb9e7e002a3f227a25862503b981bd1a23f70"
+  },
+  "tests/quality/quality-lab.html": {
+    "bytes": 9465,
+    "sha256": "35d65898856bc025b018dfc1d77fea8b04d8897f6fc8c5720dd4a18d3515baa1"
+  },
+  "src/lib/svg/convert-raster.ts": {
+    "bytes": 7706,
+    "sha256": "6b86cbe5950566470ae1e6f00a50b3fb503b12ab8c7c3dce1c5d4bb951a90f0b"
+  },
+  "src/lib/svg/trace-antialias.ts": {
+    "bytes": 12421,
+    "sha256": "e58b7edb55390b89ab280db9e75216397253b48168f1fc341b547062c248d38a"
+  },
+  "wasmGzipBytes": 278006,
+  "baselineWorkerSha256": "9656728f0e50ac1ae7744cb011d14381c1deedd92ae3cd037923fca4f966a524"
+}

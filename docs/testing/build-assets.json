@@ -1,0 +1,85 @@
+{
+  "allJavaScriptChunks": [
+    {
+      "name": "0cz1d0mv5g_q7.js",
+      "bytes": 112594,
+      "gzipBytes": 39373
+    },
+    {
+      "name": "0esdjr6xbrbvy.js",
+      "bytes": 3689,
+      "gzipBytes": 1827
+    },
+    {
+      "name": "11anh1nhjt39u.js",
+      "bytes": 229153,
+      "gzipBytes": 71457
+    },
+    {
+      "name": "14f7bv0slfse2.js",
+      "bytes": 29020,
+      "gzipBytes": 7665
+    },
+    {
+      "name": "1h298_dlonc3f.js",
+      "bytes": 14380,
+      "gzipBytes": 3666
+    },
+    {
+      "name": "2e21kaev6t-ck.js",
+      "bytes": 5364,
+      "gzipBytes": 1956
+    },
+    {
+      "name": "2js084l8-x3tb.js",
+      "bytes": 165165,
+      "gzipBytes": 44889
+    },
+    {
+      "name": "2l_gspytt86zt.js",
+      "bytes": 602159,
+      "gzipBytes": 172486
+    },
+    {
+      "name": "2zn97kxr1ek-j.js",
+      "bytes": 287510,
+      "gzipBytes": 99445
+    },
+    {
+      "name": "3kgzx4wexh_h9.js",
+      "bytes": 3761,
+      "gzipBytes": 1882
+    },
+    {
+      "name": "turbopack-1v8iq2iokcw-5.js",
+      "bytes": 9720,
+      "gzipBytes": 3853
+    },
+    {
+      "name": "turbopack-2d8ehe8uux07a.js",
+      "bytes": 9655,
+      "gzipBytes": 3825
+    },
+    {
+      "name": "turbopack-worker-2ru9m5gbh1na6.js",
+      "bytes": 849,
+      "gzipBytes": 557
+    }
+  ],
+  "totalBytes": 1473019,
+  "totalGzipBytes": 452881,
+  "downloads": {
+    "logo-alpha.svg": {
+      "bytes": 289,
+      "viewBox": "0 0 128 128",
+      "paths": 1,
+      "images": 0
+    },
+    "landscape.svg": {
+      "bytes": 366,
+      "viewBox": "0 0 160 32",
+      "paths": 2,
+      "images": 0
+    }
+  }
+}

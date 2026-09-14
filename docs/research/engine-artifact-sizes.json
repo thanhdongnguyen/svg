@@ -1,0 +1,71 @@
+{
+  "measured_date": "2026-09-14",
+  "measurement_kind": "Public repository artifact byte counts; no engine execution",
+  "method": {
+    "download": "Python urllib.request.urlopen(url).read()",
+    "raw_bytes": "len(data)",
+    "gzip_bytes": "len(gzip.compress(data, compresslevel=9, mtime=0))",
+    "sha256": "hashlib.sha256(data).hexdigest()"
+  },
+  "limits": [
+    "Branch URLs are mutable. SHA-256 identifies the exact bytes measured on this date.",
+    "Gzip sizes are calculated offline with compression level 9; they are not measured HTTP transfer sizes or Brotli sizes.",
+    "These are selected engine artifacts, not the complete app bundle; exclude UI and application preprocessing.",
+    "ImageTracer is its unminified source file. ESM Potrace dist is a single-file JS plus embedded WASM build. RasterTrace is a browser adapter around VTracer, with WASM and JS glue measured separately.",
+    "No timing, memory, image-quality, or browser-compatibility benchmark was run."
+  ],
+  "artifacts": [
+    {
+      "name": "imagetracer_source",
+      "url": "https://raw.githubusercontent.com/jankovicsandras/imagetracerjs/master/imagetracer_v1.2.6.js",
+      "raw_bytes": 47405,
+      "gzip9_bytes": 11923,
+      "sha256": "7d777599650c15aa8c1f0ab98d1158749ed8d8b97b417b83e5c69ea246382f40"
+    },
+    {
+      "name": "esm_potrace_dist",
+      "url": "https://raw.githubusercontent.com/tomayac/esm-potrace-wasm/main/dist/index.js",
+      "raw_bytes": 75989,
+      "gzip9_bytes": 30304,
+      "sha256": "424a453b06af2633db63c05a1979cda7a94d98250b4f7a7618283e50f6aaaeb0"
+    },
+    {
+      "name": "rastertrace_wasm",
+      "vtracer_dependency": "1.0.0-alpha.4",
+      "url": "https://raw.githubusercontent.com/bradsec/rastertrace/main/pkg/rastertrace_wasm_bg.wasm",
+      "raw_bytes": 301380,
+      "gzip9_bytes": 118246,
+      "sha256": "95dc45b642f115057ff2f0e9e62826932ecea89cf7ebfdd8453b8c4f64fc8ff5"
+    },
+    {
+      "name": "rastertrace_glue",
+      "url": "https://raw.githubusercontent.com/bradsec/rastertrace/main/pkg/rastertrace_wasm.js",
+      "raw_bytes": 8884,
+      "gzip9_bytes": 2566,
+      "sha256": "d3af86c3e3388a07b07901195df1001b5ce956e869cffd514bdf15265b504a06"
+    }
+  ],
+  "registry_observations": [
+    {
+      "package": "imagetracerjs",
+      "url": "https://registry.npmjs.org/imagetracerjs",
+      "latest": "1.2.6",
+      "published": "2020-05-18T18:50:57.404Z",
+      "unpacked_size_bytes": 3176908
+    },
+    {
+      "package": "esm-potrace-wasm",
+      "url": "https://registry.npmjs.org/esm-potrace-wasm",
+      "latest": "0.5.1",
+      "published": "2026-08-14T15:03:39.380Z",
+      "unpacked_size_bytes": 98750
+    },
+    {
+      "package": "@visioncortex/vtracer",
+      "url": "https://registry.npmjs.org/@visioncortex/vtracer",
+      "latest": "1.0.0-alpha.4",
+      "published": "2026-08-29T00:08:36.284Z",
+      "unpacked_size_bytes": 692673
+    }
+  ]
+}

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Reproducible test inputs and temporary browser QA pages
+/tests/fixtures/
+/tests/.browser-qa/

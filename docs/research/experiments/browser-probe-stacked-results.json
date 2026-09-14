@@ -1,0 +1,416 @@
+{
+  "date": "2026-09-14T08:31:37.471Z",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "hardwareConcurrency": 8,
+  "devicePixelRatio": 2,
+  "networkOnlineAtRun": false,
+  "width": 256,
+  "height": 256,
+  "settings": {
+    "vtracer": {
+      "mode": "spline",
+      "hierarchical": "stacked",
+      "colorMode": "color",
+      "filterSpeckle": 0,
+      "colorPrecision": 8,
+      "layerDifference": 0,
+      "cornerThreshold": 60,
+      "lengthThreshold": 4,
+      "maxIterations": 10,
+      "spliceThreshold": 45,
+      "pathPrecision": 3
+    },
+    "imagetracer": {
+      "ltres": 1,
+      "qtres": 1,
+      "pathomit": 0,
+      "colorsampling": 2,
+      "numberofcolors": 64,
+      "colorquantcycles": 3,
+      "strokewidth": 0,
+      "viewbox": true,
+      "roundcoords": 3
+    }
+  },
+  "limitations": [
+    "Six synthetic 256x256 fixtures; not a product benchmark or quality ranking.",
+    "Preset budgets differ; cannot compare speed or general engine quality from this probe.",
+    "No preprocessing or optimization from RasterTrace app used; calls its WASM adapter directly.",
+    "RGB composite metrics use decoded canvas values without linear-light color conversion; numeric diagnostic only.",
+    "Single timings include engine call only, not loading, decoding or rendering."
+  ],
+  "records": [
+    {
+      "fixture": "flat_blocks",
+      "engine": "vtracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 671,
+      "pathCount": 3,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 0,
+      "blackCompositeRMSE": 0,
+      "changedRgbaPixels": 0,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        36,
+        99,
+        235,
+        255
+      ],
+      "outputCenter": [
+        36,
+        99,
+        235,
+        255
+      ],
+      "traceMsSingleObservation": 29.300000000745058
+    },
+    {
+      "fixture": "flat_blocks",
+      "engine": "imagetracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 581,
+      "pathCount": 3,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 0,
+      "blackCompositeRMSE": 0,
+      "changedRgbaPixels": 0,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        36,
+        99,
+        235,
+        255
+      ],
+      "outputCenter": [
+        36,
+        99,
+        235,
+        255
+      ],
+      "traceMsSingleObservation": 203.60000000149012
+    },
+    {
+      "fixture": "flat_blocks_jpeg",
+      "engine": "vtracer",
+      "mime": "image/jpeg",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 3009,
+      "pathCount": 15,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 0.1858515864190542,
+      "blackCompositeRMSE": 0.1858515864190542,
+      "changedRgbaPixels": 36,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        81,
+        85,
+        192,
+        255
+      ],
+      "outputCenter": [
+        81,
+        85,
+        192,
+        255
+      ],
+      "traceMsSingleObservation": 16
+    },
+    {
+      "fixture": "flat_blocks_jpeg",
+      "engine": "imagetracer",
+      "mime": "image/jpeg",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 1575,
+      "pathCount": 9,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0.0014963187423406876,
+      "whiteCompositeRMSE": 1.4659277736372107,
+      "blackCompositeRMSE": 7.939197601981564,
+      "changedRgbaPixels": 1916,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        81,
+        85,
+        192,
+        255
+      ],
+      "outputCenter": [
+        61,
+        94,
+        197,
+        255
+      ],
+      "traceMsSingleObservation": 134
+    },
+    {
+      "fixture": "thin_lines_and_hole",
+      "engine": "vtracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 5066,
+      "pathCount": 50,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 8.223431896314356,
+      "blackCompositeRMSE": 8.223431896314356,
+      "changedRgbaPixels": 767,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        17,
+        17,
+        17,
+        255
+      ],
+      "outputCenter": [
+        17,
+        17,
+        17,
+        255
+      ],
+      "traceMsSingleObservation": 8.300000000745058
+    },
+    {
+      "fixture": "thin_lines_and_hole",
+      "engine": "imagetracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 19190,
+      "pathCount": 138,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0.00539879892386644,
+      "whiteCompositeRMSE": 10.024059170757338,
+      "blackCompositeRMSE": 14.007105543535307,
+      "changedRgbaPixels": 1222,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        17,
+        17,
+        17,
+        255
+      ],
+      "outputCenter": [
+        17,
+        17,
+        17,
+        255
+      ],
+      "traceMsSingleObservation": 127.5
+    },
+    {
+      "fixture": "linear_gradient",
+      "engine": "vtracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 8127,
+      "pathCount": 29,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 69.99530078918413,
+      "blackCompositeRMSE": 69.99530078918413,
+      "changedRgbaPixels": 65164,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        128,
+        128,
+        128,
+        255
+      ],
+      "outputCenter": [
+        131,
+        131,
+        131,
+        255
+      ],
+      "traceMsSingleObservation": 8.5
+    },
+    {
+      "fixture": "linear_gradient",
+      "engine": "imagetracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 36475,
+      "pathCount": 159,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0.008843575271905792,
+      "whiteCompositeRMSE": 9.387953460150928,
+      "blackCompositeRMSE": 10.244702437724051,
+      "changedRgbaPixels": 58013,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        128,
+        128,
+        128,
+        255
+      ],
+      "outputCenter": [
+        133,
+        133,
+        133,
+        255
+      ],
+      "traceMsSingleObservation": 165.30000000074506
+    },
+    {
+      "fixture": "constant_half_alpha",
+      "engine": "vtracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 300,
+      "pathCount": 1,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0.280147058823615,
+      "whiteCompositeRMSE": 77.7712993333659,
+      "blackCompositeRMSE": 54.99261314031185,
+      "changedRgbaPixels": 36864,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outputCenter": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "traceMsSingleObservation": 2.599999997764826
+    },
+    {
+      "fixture": "constant_half_alpha",
+      "engine": "imagetracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 445,
+      "pathCount": 2,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0,
+      "whiteCompositeRMSE": 0,
+      "blackCompositeRMSE": 0,
+      "changedRgbaPixels": 0,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outputCenter": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "traceMsSingleObservation": 136.40000000223517
+    },
+    {
+      "fixture": "radial_soft_alpha",
+      "engine": "vtracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 35688,
+      "pathCount": 556,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": null,
+      "alphaMAE": 0.403396426930111,
+      "whiteCompositeRMSE": 114.3133262205538,
+      "blackCompositeRMSE": 80.45061651634292,
+      "changedRgbaPixels": 39965,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        255,
+        0,
+        0,
+        253
+      ],
+      "outputCenter": [
+        254,
+        0,
+        0,
+        255
+      ],
+      "traceMsSingleObservation": 9.899999998509884
+    },
+    {
+      "fixture": "radial_soft_alpha",
+      "engine": "imagetracer",
+      "mime": "image/png",
+      "width": 256,
+      "height": 256,
+      "svgBytes": 271602,
+      "pathCount": 1638,
+      "gradientCount": 0,
+      "hasRaster": false,
+      "viewBox": "0 0 256 256",
+      "alphaMAE": 0.015228510837925643,
+      "whiteCompositeRMSE": 8.180226996041457,
+      "blackCompositeRMSE": 5.78162664540876,
+      "changedRgbaPixels": 36464,
+      "totalPixels": 65536,
+      "sourceCenter": [
+        255,
+        0,
+        0,
+        253
+      ],
+      "outputCenter": [
+        254,
+        0,
+        0,
+        229
+      ],
+      "traceMsSingleObservation": 164.59999999776483
+    }
+  ],
+  "corrupt": [
+    {
+      "engine": "vtracer",
+      "rejected": true,
+      "error": "Error: InvalidStateError: The source image could not be decoded."
+    },
+    {
+      "engine": "imagetracer",
+      "rejected": true,
+      "error": "Error: InvalidStateError: The source image could not be decoded."
+    }
+  ]
+}

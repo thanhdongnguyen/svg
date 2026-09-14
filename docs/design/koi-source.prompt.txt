@@ -1,0 +1,13 @@
+Use case: illustration-story
+Asset type: one source raster illustration for a browser-based SVG tracing tool, NOT a website mockup and NOT an SVG output.
+Input images: image 1 is composition and style reference only. Extract the subject from the RIGHT comparison pane of this reference; do not reproduce the interface.
+Primary request: Generate one square 1024x1024 illustration on a fully opaque clean white background. An elegant ornamental navy and blue koi fish curves in a loose S, with its head toward the lower left and sweeping flowing tail extending upward. Surround it with slender botanical stems and gracefully curved solid blue leaves, and exactly three small coral flowers placed naturally among the leaves. Preserve the distinctive koi-plus-botanical composition and refined feel of the right-hand artwork in the reference.
+Composition: centered illustration fills roughly 88 percent of the square, with an ample clear white safe border on every side; no clipping. Koi is the clear focal point. Leave breathing room between foliage and fish. A single fish, with a readable face and elegant broad fins.
+Style: polished flat decorative illustration with smooth graceful contours. Use slightly fewer and larger scales than the reference, with clear substantial separators and distinct mostly solid color regions suitable for an honest real raster-to-vector tracing fixture. Layered flat blue bands can define the fins. No photographic texture or watercolor paper; no soft shadows, no fine grain.
+Palette: six to ten dominant navy, cobalt, medium blue, slate blue, and pale blue tones, plus sparse warm coral flower accents and white. Mostly solid fills rather than gradients.
+Constraints: image artwork only; no typography, no UI, no labels, no border, no frame, no watermarks, no fake comparison, no tiny hairlines. Actual raster PNG asset with solid white opaque background.
+
+Targeted revision prompt:
+Use case: precise-object-edit
+Asset type: a source raster PNG for a real vector tracing sample, artwork only.
+Edit the provided blue koi illustration while preserving its fish silhouette, sweeping fins, leaf arrangement, clean white opaque background, and blue/coral palette. Make only these targeted corrections: add a THIRD small coral flower on the upper-right botanical stem near the upper-right blue leaves, matching the existing two coral blossoms; output a square image exactly 1024x1024 pixels. Keep the fish and all foliage inside a clean safe border, no clipping. Retain crisp mostly solid flat blue regions and smooth curves. Do not add texture, shadows, lettering, UI, labels, frame or watermark. This is a raster source asset only, not a comparison or SVG.
